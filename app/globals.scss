@@ -21,3 +21,79 @@
 body {
   background-color: $black-color;
 }
+
+header {
+  color: white;
+
+  .navbar {
+    display: flex;
+  }
+  .header-logo {
+    max-width: 250px;
+  }
+  .dropdown-content {
+    position: absolute;
+    z-index: 1;
+    padding: 1.5rem 0;
+    background-color: $black-color;
+    border: gray solid 1px;
+    a {
+      padding: 0.8rem 5rem 0.8rem 1rem;
+    }
+  }
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Adjust according to your layout */
+  margin: 0 auto;
+
+  .slides {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-height: 75vh;
+
+    .slide {
+      display: none;
+      flex: 0 0 100%;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      color: white;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+
+  .dots {
+    display: flex;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: gray;
+      margin: 0 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}

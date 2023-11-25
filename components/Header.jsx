@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import image from "../../public/images/logo_surfaces_nouvelle_ere.png";
+
 const Header = () => {
   const navLinks = [
     { label: "Accueil", href: "/" },
@@ -14,6 +14,11 @@ const Header = () => {
         { label: "Granite", href: "/nos-produits/granite" },
       ],
     },
+    { label: "Nos réalisations", href: "/portfolio" },
+    { label: "Nos fournisseur", href: "/provider" },
+    { label: "Blogue", href: "/blog" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Nous joindre", href: "/contact" },
     // Add more navigation items as needed
     // Add language switcher if necessary
   ];
@@ -24,9 +29,9 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div className="d-flex justify-content-center">
-        <Link href="/">
+    <header className="header py-5">
+      <div className="flex justify-center">
+        <Link href="/" className="p-2">
           {/* Insert your company logo here */}
           <img
             className="header-logo"
@@ -35,17 +40,20 @@ const Header = () => {
           />
         </Link>
       </div>
-      <nav className="navbar">
-        <ul>
+      <nav className="flex justify-center mt-4">
+        <ul className="flex justify-around">
           {navLinks.map((item, index) => (
-            <li key={index} className={item.subLinks ? "dropdown" : ""}>
+            <li
+              key={index}
+              className={item.subLinks ? "dropdown" : "" + " px-4"}
+            >
               {item.subLinks ? (
                 <div onClick={handleSubLinksToggle}>
                   {item.label}
                   {showSubLinks && (
-                    <ul className="dropdown-content">
+                    <ul className="dropdown-content mt-2 rounded-2xl">
                       {item.subLinks.map((subItem, subIndex) => (
-                        <li key={subIndex}>
+                        <li key={subIndex} className="py-2 ps-4 pe-10">
                           <Link href={subItem.href}>{subItem.label}</Link>
                         </li>
                       ))}
