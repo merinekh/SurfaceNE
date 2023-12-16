@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header py-5">
+    <header className="header py-2">
       <div className="flex justify-center">
         <Link href="/" className="p-2">
           {/* Insert your company logo here */}

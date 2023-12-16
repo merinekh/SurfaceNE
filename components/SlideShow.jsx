@@ -11,7 +11,12 @@ const Slideshow = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const slides = [
     {
-      image: "home-caroussel-hero-1.png",
+      image: "home-caroussel-hero-3.png",
+      text: "Slide 3 Description",
+      buttonLink: "/link-to-slide3",
+    },
+    {
+      image: "home-caroussel-hero-1.jpg",
       text: "Slide 1 Description",
       buttonLink: "/link-to-slide1",
     },
@@ -19,11 +24,6 @@ const Slideshow = () => {
       image: "home-caroussel-hero-2.png",
       text: "Slide 2 Description",
       buttonLink: "/link-to-slide2",
-    },
-    {
-      image: "home-caroussel-hero-3.png",
-      text: "Slide 3 Description",
-      buttonLink: "/link-to-slide3",
     },
     // Add more slides as needed
   ];
@@ -66,7 +66,13 @@ const Slideshow = () => {
             key={index}
             className={`slide ${index === currentSlide ? "active" : ""}`}
           >
-            <img src={`/images/${slide.image}`} alt={`Slide ${index + 1}`} />
+            <img
+              src={`/images/${slide.image}`}
+              alt={`Slide ${index + 1}`}
+              className={
+                !slide.image.includes("hero-1") ? "-translate-y-10" : ""
+              }
+            />
             {/* <div className="slide-text">
               <p>{slide.text}</p>
               <a href={slide.buttonLink}>Link</a>
@@ -74,9 +80,11 @@ const Slideshow = () => {
           </div>
         ))}
       </div>
-      <div className="controls flex align-baseline py-4">
-        <button onClick={goToPrevSlide}>{<ChevronLeftIcon />}</button>
-        <div className="dots">
+      <div className="controls flex align-baseline py-3">
+        <button onClick={goToPrevSlide}>
+          <ChevronLeftIcon />
+        </button>
+        <div className="dots px-4">
           {slides.map((_, index) => (
             <span
               key={index}
@@ -86,7 +94,9 @@ const Slideshow = () => {
             />
           ))}
         </div>
-        <button onClick={goToNextSlide}>{<ChevronRightIcon />}</button>
+        <button onClick={goToNextSlide}>
+          <ChevronRightIcon />
+        </button>
 
         <button onClick={handlePausePlay}>
           {isPlaying ? (
