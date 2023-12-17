@@ -40,7 +40,7 @@ const Header = () => {
           />
         </Link>
       </div>
-      <nav className="flex justify-center mt-4">
+      <nav className="flex justify-center mt-2">
         <ul className="flex justify-around">
           {navLinks.map((item, index) => (
             <li

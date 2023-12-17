@@ -88,7 +88,6 @@ const Slideshow = () => {
           {slides.map((_, index) => (
             <span
               key={index}
-              ChevronRightIcon
               className={`dot ${index === currentSlide ? "active" : ""}`}
               onClick={() => handleDotClick(index)}
             />

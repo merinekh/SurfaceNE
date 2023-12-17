@@ -29,7 +29,7 @@ header {
     display: flex;
   }
   .header-logo {
-    max-width: 250px;
+    max-width: 240px;
   }
   .dropdown-content {
     position: absolute;
@@ -52,7 +52,7 @@ header {
     display: flex;
     overflow: hidden;
     position: relative;
-    max-height: 74vh;
+    max-height: 75vh;
     filter: brightness(0.8);
 
     .slide {
