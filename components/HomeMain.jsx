@@ -50,7 +50,7 @@ const HomeMain = () => {
           <div className="image-content flex justify-center items-center">
             <div className="relative h-full">
               <img
-                src={`/images/home-caroussel-hero-3.png`}
+                src={`/images/project_images/ilot-14inch-2.jpg`}
                 alt={`Image Home Card`}
                 className="w-auto h-full object-cover rounded-r-xl"
               />
@@ -59,7 +59,6 @@ const HomeMain = () => {
         </div>
       </main>
       <ProductsBanner />
-      <ProductsMainSections />
     </>
   );
 };

@@ -11,19 +11,24 @@ const Slideshow = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const slides = [
     {
-      image: "home-caroussel-hero-3.png",
+      image: "/project_images/kitchen-countertop.jpg",
+      text: "Slide 2 Description",
+      buttonLink: "/link-to-slide2",
+    },
+    {
+      image: "/project_images/kitchen-1.jpg",
       text: "Slide 3 Description",
       buttonLink: "/link-to-slide3",
+    },
+    {
+      image: "/project_images/bathroom-1.jpg",
+      text: "Slide 2 Description",
+      buttonLink: "/link-to-slide2",
     },
     {
       image: "home-caroussel-hero-1.jpg",
       text: "Slide 1 Description",
       buttonLink: "/link-to-slide1",
-    },
-    {
-      image: "home-caroussel-hero-2.png",
-      text: "Slide 2 Description",
-      buttonLink: "/link-to-slide2",
     },
     // Add more slides as needed
   ];
