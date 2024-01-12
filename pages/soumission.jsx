@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import "../app/globals.scss";
 import { Container, Card, Form, Button } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,64 +13,63 @@ const Soumission = () => {
   };
 
   return (
-    <Container className="page-width page-width--narrow section-template--16646198296894__main-padding">
-      <h1 className="main-page-title page-title h0">Soumission</h1>
-      <div className="rte">
-        <div className="bcontact-embed bcontact-lg">
-          <div className="bcontact-content bcontact-content--placeholder">
-            <div className="bcontact-inner">
-              <div className="bcontact-title">
-                <span>Soumission gratuite</span>
-              </div>
-              <div className="bcontact-description">
-                Pour une soumission rapide, veuillez remplir le formulaire
-                suivant.
-              </div>
-              <Form>
-                <Form.Group controlId="formBasicName">
-                  <Form.Label>Votre nom complet</Form.Label>
-                  <Form.Control type="text" placeholder="Votre nom complet" />
-                </Form.Group>
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <Container className="flex">
+        <Card className="p-8 rounded-lg shadow-lg bg-white">
+          <h1 className="text-3xl font-semibold text-center mb-6">
+            Soumission pour Comptoirs
+          </h1>
+          <Form>
+            <Form.Group controlId="formBasicName">
+              <Form.Control
+                type="text"
+                placeholder="Votre nom complet"
+                className="mb-4"
+              />
+            </Form.Group>
 
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Votre courriel</Form.Label>
-                  <Form.Control type="email" placeholder="Votre courriel" />
-                </Form.Group>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                placeholder="Votre courriel"
+                className="mb-4"
+              />
+            </Form.Group>
 
-                <Form.Group controlId="formBasicPhone">
-                  <Form.Label>Votre numéro de téléphone</Form.Label>
-                  <Form.Control
-                    type="tel"
-                    placeholder="Votre numéro de téléphone"
-                  />
-                </Form.Group>
+            <Form.Group controlId="formBasicPhone">
+              <Form.Control
+                type="tel"
+                placeholder="Votre numéro de téléphone"
+                className="mb-4"
+              />
+            </Form.Group>
 
-                <Form.Group controlId="formBasicCity">
-                  <Form.Label>Votre ville</Form.Label>
-                  <Form.Control type="text" placeholder="Votre ville" />
-                </Form.Group>
+            <Form.Group controlId="formBasicCity">
+              <Form.Control
+                type="text"
+                placeholder="Votre ville"
+                className="mb-4"
+              />
+            </Form.Group>
 
-                <Form.Group controlId="formBasicProjectDate">
-                  <Form.Label>Date prévue du projet</Form.Label>
-                  <DatePicker
-                    selected={selectedDate}
-                    onChange={handleDateChange}
-                    placeholderText="Sélectionner une date"
-                    className="form-control"
-                  />
-                </Form.Group>
+            <Form.Group controlId="formBasicProjectDate">
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleDateChange}
+                placeholderText="Sélectionner une date"
+                className="form-control mb-4"
+              />
+            </Form.Group>
 
-                {/* Ajoutez d'autres champs de formulaire ici */}
+            {/* Autres champs de formulaire */}
 
-                <Button variant="primary" type="submit" className="w-full">
-                  Envoyer
-                </Button>
-              </Form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Container>
+            <Button variant="primary" type="submit" className="w-full">
+              Envoyer
+            </Button>
+          </Form>
+        </Card>
+      </Container>
+    </div>
   );
 };
 

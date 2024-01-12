@@ -99,11 +99,11 @@ export const Footer = () => {
               Surfaces Nouvelle Ère
             </a>
           </div>
-          <div class="copyright__content flex justify-center">
+          {/* <div class="copyright__content flex justify-center">
             <a target="_blank" rel="nofollow" href="" class="text-white">
               Développé par Digitale Evolution
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
