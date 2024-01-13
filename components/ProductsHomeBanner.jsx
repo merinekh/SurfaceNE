@@ -6,8 +6,10 @@ const ProductsBanner = () => {
     <>
       <div className="banner-content flex items-center justify-center w-full bg-gradient-to-r text-white pt-8">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold mb-6">NOS PRODUITS</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+            NOS PRODUITS
+          </h2>
+          <p className="text-base md:text-lg">
             Surfaces Nouvelle ère vous propose l'installation de comptoirs en :
           </p>
 

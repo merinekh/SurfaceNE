@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import StepComponent from "./StepsComponent";
-import ProductsMainSections from "./ProductsMainSections";
 import ProductsBanner from "./ProductsHomeBanner";
-ProductsBanner;
+
 const HomeMain = () => {
   return (
     <>
+      <ProductsBanner />
       <main className="flex flex-col items-center mx-4 sm:mx-8 lg:mx-24 px-4 sm:px-8">
         <div className="card bg-white flex flex-col md:flex-row rounded-xl my-4 sm:my-8">
           <div className="image-content relative h-auto">
@@ -56,8 +56,6 @@ const HomeMain = () => {
           </div>
         </div>
       </main>
-
-      <ProductsBanner />
     </>
   );
 };
