@@ -40,7 +40,7 @@ const Header = () => {
           />
         </Link>{" "}
         <div
-          className={`flex justify-center p-2 md:hidden ${
+          className={`flex justify-center p-2 lg:hidden ${
             showMobileMenu
               ? "header-icon header-icon-open transition-all duration-300 ease-in-out"
               : "header-icon header-icon-closed transition-all duration-300 ease-in-out"
@@ -57,7 +57,7 @@ const Header = () => {
       <nav
         className={`items-center mt-2 ${
           showMobileMenu ? "visible flex flex-col" : "hidden"
-        } md:flex justify-center md:space-x-4`} // Horizontally align and add spacing on md and larger screens
+        } lg:flex justify-center lg:space-x-4`} // Horizontally align and add spacing on md and larger screens
       >
         {navLinks.map((item, index) => (
           <div
