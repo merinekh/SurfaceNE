@@ -5,39 +5,38 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 export const Footer = () => {
   return (
     <div class="footer">
-      <div class="footer__content-top mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+      <div class="footer__content-top mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
         {/* <!-- Logo Column --> */}
-        <div class="footer-block flex items-center justify-center">
+        <div class="footer-block flex items-center justify-center col-span-1 md:col-span-1">
           <img
-            src="//surfacesnouvelleere.ca/cdn/shop/files/favicon_surfaces_nouvelle_ere_png.png?v=1669513855&amp;width=200"
+            src="/images/favicon_surfaces_nouvelle_ere.png"
             alt="Surfaces Nouvelle Ère"
             loading="lazy"
-            width="200"
-            height="144"
+            class="w-full max-w-xs"
           />
         </div>
         {/* <!-- Mission Column --> */}
-        <div class="footer-block flex-col ">
-          <h2 class="footer-block__heading text-white font-bold text-2xl mb-4">
+        <div class="footer-block flex-col text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+          <h2 class="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             NOTRE MISSION
           </h2>
-          <p class="text-gray-300 font-normal text-lg leading-relaxed mb-8">
+          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Notre mission est de vous accompagner dans la réalisation de vos
             projets de rénovations.
           </p>
-          <p class="text-gray-300 font-normal text-lg leading-relaxed mb-8">
+          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Obtenir le comptoir de cuisine ou de salle de bain de vos rêves
             n'aura jamais été aussi simple et rapide qu'avec Surfaces Nouvelle
             Ère.
           </p>
-          <p class="text-gray-300 font-normal text-lg leading-relaxed mb-8">
+          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Nos professionnels s'engagent à vous offrir un service de qualité
             complet et efficace.
           </p>
         </div>
         {/* <!-- Navigation Links Column --> */}
-        <div class="footer-block mx-auto">
-          <h2 class="footer-block__heading text-white font-bold text-2xl mb-4">
+        <div class="footer-block text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+          <h2 class="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             Passez à l'action
           </h2>
           <ul class="list-unstyled">
@@ -67,8 +66,8 @@ export const Footer = () => {
             </li>
           </ul>
           {/* <!-- Social Links --> */}
-          <div class="footer__list-social mx-auto max-w-7xl py-4">
-            <ul class="list-unstyled flex">
+          <div class="footer__list-social py-4">
+            <ul class="list-unstyled flex justify-center sm:justify-start">
               <li class="list-social__item px-4">
                 <a
                   href="https://www.facebook.com/profile.php?id=100088187185568"
@@ -92,18 +91,13 @@ export const Footer = () => {
 
       {/* <!-- Bottom Content --> */}
       <div class="footer__content-bottom mx-auto max-w-7xl py-4">
-        <div class="footer__column flex-col">
-          <div class="copyright__content text-white flex justify-center">
+        <div class="footer__column text-center">
+          <div class="copyright__content text-white">
             © 2024,{" "}
             <a href="/" class="text-white">
               Surfaces Nouvelle Ère
             </a>
           </div>
-          {/* <div class="copyright__content flex justify-center">
-            <a target="_blank" rel="nofollow" href="" class="text-white">
-              Développé par Digitale Evolution
-            </a>
-          </div> */}
         </div>
       </div>
     </div>
