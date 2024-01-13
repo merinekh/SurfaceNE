@@ -35,23 +35,23 @@ header {
 
   .header-logo {
     width: 30vh;
-    max-width: 100%; // Default to full width
+    max-width: 100%;
     height: 20vh;
 
     @screen sm {
-      max-width: 80%; // On small screens, limit to 80% width
+      max-width: 80%;
     }
 
     @screen md {
-      max-width: 50%; // On medium screens, limit to 50% width
+      max-width: 50%;
     }
 
     @screen lg {
-      max-width: 60%; // On large screens, limit to 60% width
+      max-width: 60%;
     }
 
     @screen xl {
-      max-width: 70%; // On extra-large screens, limit to 70% width
+      max-width: 70%;
     }
   }
 
@@ -123,4 +123,19 @@ header {
       }
     }
   }
+}
+
+// Added styles for smooth transition
+.header-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-icon-closed {
+  transform: rotate(0deg);
+}
+
+.header-icon-open {
+  transform: rotate(90deg);
 }

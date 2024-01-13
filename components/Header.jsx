@@ -40,16 +40,24 @@ const Header = () => {
           />
         </Link>{" "}
         <div
-          className="flex justify-center p-2"
+          className={`flex justify-center p-2 md:hidden ${
+            showMobileMenu
+              ? "header-icon header-icon-open transition-all duration-300 ease-in-out"
+              : "header-icon header-icon-closed transition-all duration-300 ease-in-out"
+          }`}
           onClick={handleMobileMenuToggle}
         >
-          ☰
+          {showMobileMenu ? (
+            <span className="text-white text-2xl">&#10005;</span> // Unicode "✕" character
+          ) : (
+            <span className="text-white text-2xl">&#9776;</span> // Unicode "☰" character
+          )}
         </div>
       </div>
       <nav
-        className={`flex flex-col items-center mt-2 ${
-          showMobileMenu ? "visible" : "hidden"
-        }`}
+        className={`items-center mt-2 ${
+          showMobileMenu ? "visible flex flex-col" : "hidden"
+        } md:flex justify-center md:space-x-4`} // Horizontally align and add spacing on md and larger screens
       >
         {navLinks.map((item, index) => (
           <div
