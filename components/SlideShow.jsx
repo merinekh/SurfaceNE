@@ -74,9 +74,7 @@ const Slideshow = () => {
             <img
               src={`/images/${slide.image}`}
               alt={`Slide ${index + 1}`}
-              className={
-                !slide.image.includes("hero-1") ? "-translate-y-10" : ""
-              }
+              className="w-full h-auto"
             />
             {/* <div className="slide-text">
               <p>{slide.text}</p>
@@ -113,5 +111,4 @@ const Slideshow = () => {
     </div>
   );
 };
-
 export default Slideshow;
