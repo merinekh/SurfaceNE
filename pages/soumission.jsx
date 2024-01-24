@@ -24,7 +24,7 @@ const Soumission = () => {
               <Form.Control
                 type="text"
                 placeholder="Votre nom complet"
-                className="mb-4"
+                className="mb-4  w-full p-3 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
               />
             </Form.Group>
 
@@ -32,7 +32,7 @@ const Soumission = () => {
               <Form.Control
                 type="email"
                 placeholder="Votre courriel"
-                className="mb-4"
+                className="mb-4  w-full p-3 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
               />
             </Form.Group>
 
@@ -40,7 +40,7 @@ const Soumission = () => {
               <Form.Control
                 type="tel"
                 placeholder="Votre numéro de téléphone"
-                className="mb-4"
+                className="mb-4  w-full p-3 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
               />
             </Form.Group>
 
@@ -48,7 +48,7 @@ const Soumission = () => {
               <Form.Control
                 type="text"
                 placeholder="Votre ville"
-                className="mb-4"
+                className="mb-4  w-full p-3 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
               />
             </Form.Group>
 
@@ -57,13 +57,17 @@ const Soumission = () => {
                 selected={selectedDate}
                 onChange={handleDateChange}
                 placeholderText="Sélectionner une date"
-                className="form-control mb-4"
+                className="form-control mb-4  w-full p-3 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
               />
             </Form.Group>
 
             {/* Autres champs de formulaire */}
 
-            <Button variant="primary" type="submit" className="w-full">
+            <Button
+              variant="primary"
+              type="submit"
+              className="w-full inline-block px-4 py-2 rounded-full bg-black text-white hover:bg-gray-300 transition duration-300 ease-in-out text-sm lg:text-base"
+            >
               Envoyer
             </Button>
           </Form>
