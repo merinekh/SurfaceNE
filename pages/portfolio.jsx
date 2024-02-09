@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../app/globals.scss";
 import ImageSlider from "@/components/ImageSlider";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Timeline from "@/components/Timeline";
 
 const Portfolio = () => {
   const projectsData = [
     {
       title: "Kitchen Renovation",
       location: "123 Main St, Cityville",
-      dates: "June 2022 - August 2022",
+      dates: "June 2021 - August 2021",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus augue. Proin et justo non metus ullamcorper congue at vitae elit. In hac habitasse platea dictumst.",
       image_before:
@@ -32,7 +33,7 @@ const Portfolio = () => {
     {
       title: "Kitchen Renovation",
       location: "123 Main St, Cityville",
-      dates: "June 2022 - August 2022",
+      dates: "June 2023 - August 2023",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus augue. Proin et justo non metus ullamcorper congue at vitae elit. In hac habitasse platea dictumst.",
       image_before:
@@ -43,7 +44,7 @@ const Portfolio = () => {
     {
       title: "Kitchen Renovation",
       location: "123 Main St, Cityville",
-      dates: "June 2022 - August 2022",
+      dates: "June 2024 - August 2024",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus augue. Proin et justo non metus ullamcorper congue at vitae elit. In hac habitasse platea dictumst.",
       image_before:
@@ -54,7 +55,7 @@ const Portfolio = () => {
     {
       title: "Kitchen Renovation",
       location: "123 Main St, Cityville",
-      dates: "June 2022 - August 2022",
+      dates: "June 2025 - August 2025",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus augue. Proin et justo non metus ullamcorper congue at vitae elit. In hac habitasse platea dictumst.",
       image_before:
@@ -92,21 +93,7 @@ const Portfolio = () => {
         <h2 className="text-3xl text-white text-center font-semibold mb-6">
           Nos Réalisations
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
-            <div key={index} className="bg-white shadow-md p-8 rounded-md mb-8">
-              <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-              <p className="text-gray-600 mb-2">{project.location}</p>
-              <p className="text-gray-600 mb-2">{project.dates}</p>
-              <p className="text-gray-800 mb-4">{project.description}</p>
-
-              <ImageSlider
-                beforeImageUrl={project.image_before}
-                afterImageUrl={project.image_after}
-              />
-            </div>
-          ))}
-        </div>
+        <Timeline projectsData={projectsData} />
       </div>
       <Footer />
     </>
