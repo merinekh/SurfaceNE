@@ -5,7 +5,7 @@ import Link from "next/link";
 const Header = () => {
   const navLinks = [
     { label: "Accueil", href: "/" },
-    { label: "Soumission", href: "/soumission" },
+    { label: "Soumission", href: "/quote" },
     {
       label: "Nos produits",
       href: "/products",

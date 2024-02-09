@@ -48,7 +48,7 @@ const HomeMain = () => {
               />
             </div>
             <a
-              href="/pages/contact"
+              href="/quote"
               className="btn-primary text-center px-6 py-3 rounded-full text-white bg-black hover:bg-gray transition duration-300 ease-in-out"
             >
               SOUMISSION GRATUITE

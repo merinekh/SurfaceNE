@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const Soumission = () => {
+const Quote = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [material, setMaterial] = useState("");
 
@@ -90,36 +90,45 @@ const Soumission = () => {
                   Matériel recherché
                 </Form.Label>
                 <div className="mb-3">
-                  <Form.Check
-                    type="radio"
-                    id="quartz-radio"
-                    label="Quartz"
-                    name="material"
-                    value="quartz"
-                    checked={material === "quartz"}
-                    onChange={handleMaterialChange}
-                    className="mb-2"
-                  />
-                  <Form.Check
-                    type="radio"
-                    id="granite-radio"
-                    label="Granite"
-                    name="material"
-                    value="granite"
-                    checked={material === "granite"}
-                    onChange={handleMaterialChange}
-                    className="mb-2"
-                  />
-                  <Form.Check
-                    type="radio"
-                    id="other-radio"
-                    label="Autre"
-                    name="material"
-                    value="other"
-                    checked={material === "other"}
-                    onChange={handleMaterialChange}
-                    className="mb-2"
-                  />
+                  <div className="flex align-middle pb-1">
+                    <Form.Check
+                      type="radio"
+                      id="quartz-radio"
+                      name="material"
+                      value="quartz"
+                      checked={material === "quartz"}
+                      onChange={handleMaterialChange}
+                    />
+                    <Form.Label htmlFor="quartz-radio" className="ps-1">
+                      Quartz
+                    </Form.Label>
+                  </div>
+                  <div className="flex pb-1">
+                    <Form.Check
+                      type="radio"
+                      id="granite-radio"
+                      name="material"
+                      value="granite"
+                      checked={material === "granite"}
+                      onChange={handleMaterialChange}
+                    />
+                    <Form.Label htmlFor="granite-radio" className="ps-1">
+                      Granite
+                    </Form.Label>
+                  </div>
+                  <div className="flex pb-1">
+                    <Form.Check
+                      type="radio"
+                      id="other-radio"
+                      name="material"
+                      value="other"
+                      checked={material === "other"}
+                      onChange={handleMaterialChange}
+                    />
+                    <Form.Label htmlFor="other-radio" className="ps-1">
+                      Autre
+                    </Form.Label>
+                  </div>
                 </div>
               </Form.Group>
 
@@ -142,20 +151,28 @@ const Soumission = () => {
               </Form.Group>
 
               <Form.Group controlId="formBasicCounterThickness">
-                <Form.Label>Épaisseur de comptoir désirée</Form.Label>
+                <Form.Label className="font-bold">
+                  Épaisseur de comptoir désirée
+                </Form.Label>
                 <div className="mb-3">
-                  <Form.Check
-                    type="radio"
-                    label="2 cm"
-                    name="counter-thickness"
-                    // Assurez-vous de lier la sélection à une variable d'état
-                  />
-                  <Form.Check
-                    type="radio"
-                    label="3 cm"
-                    name="counter-thickness"
-                    // Assurez-vous de lier la sélection à une variable d'état
-                  />
+                  <div className="flex items-center mb-2">
+                    <Form.Check
+                      type="radio"
+                      name="counter-thickness"
+                      // Ensure to link the selection to a state variable
+                      className="mr-2"
+                    />
+                    <Form.Label className="radio-label">2 cm</Form.Label>
+                  </div>
+                  <div className="flex items-center">
+                    <Form.Check
+                      type="radio"
+                      name="counter-thickness"
+                      // Ensure to link the selection to a state variable
+                      className="mr-2"
+                    />
+                    <Form.Label className="radio-label">3 cm</Form.Label>
+                  </div>
                 </div>
               </Form.Group>
 
@@ -195,4 +212,4 @@ const Soumission = () => {
   );
 };
 
-export default Soumission;
+export default Quote;
