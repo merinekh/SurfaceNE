@@ -87,10 +87,6 @@ header {
       display: none;
       flex: 0 0 100%;
 
-      &.active {
-        display: block;
-      }
-
       img {
         width: 100%;
         height: auto;
@@ -129,6 +125,53 @@ header {
     }
   }
 }
+
+.slideshow .slides {
+  .slide {
+    display: flex;
+    overflow: hidden;
+    max-height: 75vh;
+    position: absolute;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.8s ease-in-out; /* Add opacity transition */
+  }
+
+  .slide.active {
+    display: contents;
+    // opacity: 1; /* Change opacity to 1 for active slide */
+    img {
+      animation: slideIn 1s ease-in-out forwards;
+    }
+  }
+
+  .slide.prev {
+    display: table;
+    animation: slideOut 1s ease-in-out forwards;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    // opacity: ;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 // Added styles for smooth transition
 .header-icon {
   font-size: 2rem;

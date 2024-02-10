@@ -8,6 +8,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(currentSlide - 1);
   const [isPlaying, setIsPlaying] = useState(true);
   const slides = [
     {
@@ -38,6 +39,7 @@ const Slideshow = () => {
 
     if (isPlaying) {
       intervalId = setInterval(() => {
+        setPrevSlide(currentSlide);
         setCurrentSlide((prevSlide) =>
           prevSlide === slides.length - 1 ? 0 : prevSlide + 1
         );
@@ -69,7 +71,10 @@ const Slideshow = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`slide ${index === currentSlide ? "active" : ""}`}
+            className={`slide ${index === currentSlide ? "active" : ""} ${
+              index === prevSlide ? "prev" : ""
+            }`}
+            abc={console.log("first", prevSlide, index)}
           >
             <img
               src={`/images/${slide.image}`}

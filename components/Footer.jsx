@@ -50,7 +50,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="/pages/contact"
+                href="/pages/quote"
                 class="text-white block mb-3 hover:underline"
               >
                 Faites une soumission
