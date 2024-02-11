@@ -93,7 +93,7 @@ const Slideshow = () => {
             <img
               src={`/images/${slide.image}`}
               alt={`Slide ${index + 1}`}
-              className="w-full h-auto"
+              className="w-full h-80 bg-cover sm:h-[70vh] 2xl:h-auto"
             />
             {/* <div className="slide-text">
               <p>{slide.text}</p>

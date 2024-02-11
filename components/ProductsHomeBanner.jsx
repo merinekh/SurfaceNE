@@ -4,7 +4,7 @@ import ProductsMainSections from "./ProductsMainSections";
 const ProductsBanner = () => {
   return (
     <>
-      <div className="banner-content flex items-center justify-center w-full bg-gradient-to-r text-white pt-8">
+      <div className="banner-content flex items-center justify-center w-full bg-gradient-to-r text-white pt-4">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
             NOS PRODUITS
