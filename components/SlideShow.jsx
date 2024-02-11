@@ -7,9 +7,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Slideshow = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [prevSlide, setPrevSlide] = useState(currentSlide - 1);
-  const [isPlaying, setIsPlaying] = useState(true);
   const slides = [
     {
       image: "/project_images/kitchen-countertop.jpg",
@@ -33,6 +30,11 @@ const Slideshow = () => {
     },
     // Add more slides as needed
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(currentSlide - 1);
+  const [leftToR, setLeftToR] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     let intervalId;
@@ -58,10 +60,12 @@ const Slideshow = () => {
   };
 
   const goToPrevSlide = () => {
+    setPrevSlide(currentSlide);
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   const goToNextSlide = () => {
+    setPrevSlide(currentSlide);
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
@@ -73,8 +77,18 @@ const Slideshow = () => {
             key={index}
             className={`slide ${index === currentSlide ? "active" : ""} ${
               index === prevSlide ? "prev" : ""
+            } ${
+              currentSlide - prevSlide === -1 ||
+              currentSlide - prevSlide === slides.length - 1
+                ? "reverse"
+                : ""
             }`}
-            abc={console.log("first", prevSlide, index)}
+            abc={console.log(
+              "prev",
+              currentSlide,
+              prevSlide,
+              currentSlide - prevSlide
+            )}
           >
             <img
               src={`/images/${slide.image}`}
