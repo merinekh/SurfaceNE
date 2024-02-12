@@ -83,12 +83,6 @@ const Slideshow = () => {
                 ? "reverse"
                 : ""
             }`}
-            abc={console.log(
-              "prev",
-              currentSlide,
-              prevSlide,
-              currentSlide - prevSlide
-            )}
           >
             <img
               src={`/images/${slide.image}`}

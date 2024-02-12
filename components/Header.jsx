@@ -42,8 +42,8 @@ const Header = () => {
         <div
           className={`flex justify-center p-2 max-h-min lg:hidden ${
             showMobileMenu
-              ? "header-icon header-icon-open transition-all duration-300 ease-in-out"
-              : "header-icon header-icon-closed transition-all duration-300 ease-in-out"
+              ? "header-icon header-icon-open transition-opacity duration-300 ease-in-out"
+              : "header-icon header-icon-closed transition-opacity duration-300 ease-in-out"
           }`}
           onClick={handleMobileMenuToggle}
         >
@@ -62,7 +62,7 @@ const Header = () => {
         {navLinks.map((item, index) => (
           <div
             key={index}
-            className={`${item.subLinks ? "dropdown" : ""} px-4 py-2 ${
+            className={`${item.subLinks ? "dropdown" : ""} px-4 py-2 z-0 ${
               item.subLinks ? "mobile-submenu" : ""
             }`}
           >

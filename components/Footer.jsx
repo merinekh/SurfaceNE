@@ -4,82 +4,82 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const Footer = () => {
   return (
-    <div class="footer">
-      <div class="footer__content-top mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
+    <div className="footer">
+      <div className="footer__content-top mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
         {/* <!-- Logo Column --> */}
-        <div class="footer-block flex items-center justify-center col-span-1 md:col-span-1">
+        <div className="footer-block flex items-center justify-center col-span-1 md:col-span-1">
           <img
             src="/images/favicon_surfaces_nouvelle_ere.png"
             alt="Surfaces Nouvelle Ère"
             loading="lazy"
-            class="w-full max-w-xs"
+            className="w-full max-w-xs"
           />
         </div>
         {/* <!-- Mission Column --> */}
-        <div class="footer-block flex-col text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
-          <h2 class="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
+        <div className="footer-block flex-col text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+          <h2 className="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             NOTRE MISSION
           </h2>
-          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
+          <p className="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Notre mission est de vous accompagner dans la réalisation de vos
             projets de rénovations.
           </p>
-          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
+          <p className="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Obtenir le comptoir de cuisine ou de salle de bain de vos rêves
             n'aura jamais été aussi simple et rapide qu'avec Surfaces Nouvelle
             Ère.
           </p>
-          <p class="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
+          <p className="text-gray-300 font-normal text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed mb-4">
             Nos professionnels s'engagent à vous offrir un service de qualité
             complet et efficace.
           </p>
         </div>
         {/* <!-- Navigation Links Column --> */}
-        <div class="footer-block text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
-          <h2 class="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
+        <div className="footer-block text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+          <h2 className="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             Passez à l'action
           </h2>
-          <ul class="list-unstyled">
+          <ul className="list-unstyled">
             <li>
               <a
-                href="/pages/nos-realisations"
-                class="text-white block mb-3 hover:underline"
+                href="/nos-realisations"
+                className="text-white block mb-3 hover:underline"
               >
                 Consultez nos réalisations
               </a>
             </li>
             <li>
               <a
-                href="/pages/quote"
-                class="text-white block mb-3 hover:underline"
+                href="/quote"
+                className="text-white block mb-3 hover:underline"
               >
                 Faites une soumission
               </a>
             </li>
             <li>
               <a
-                href="/pages/nous-joindre"
-                class="text-white block mb-3 hover:underline"
+                href="/nous-joindre"
+                className="text-white block mb-3 hover:underline"
               >
                 Contactez-nous
               </a>
             </li>
           </ul>
           {/* <!-- Social Links --> */}
-          <div class="footer__list-social py-4">
-            <ul class="list-unstyled flex justify-center sm:justify-start">
-              <li class="list-social__item px-4">
+          <div className="footer__list-social py-4">
+            <ul className="list-unstyled flex justify-center sm:justify-start">
+              <li className="list-social__item px-4">
                 <a
                   href="https://www.facebook.com/profile.php?id=100088187185568"
-                  class="text-white"
+                  className="text-white"
                 >
                   <FacebookIcon />
                 </a>
               </li>
-              <li class="list-social__item">
+              <li className="list-social__item">
                 <a
                   href="https://www.instagram.com/surfacesnouvelleere/?hl=fr"
-                  class="text-white"
+                  className="text-white"
                 >
                   <InstagramIcon />
                 </a>
@@ -90,11 +90,11 @@ export const Footer = () => {
       </div>
 
       {/* <!-- Bottom Content --> */}
-      <div class="footer__content-bottom mx-auto max-w-7xl py-4">
-        <div class="footer__column text-center">
-          <div class="copyright__content text-white">
+      <div className="footer__content-bottom mx-auto max-w-7xl py-4">
+        <div className="footer__column text-center">
+          <div className="copyright__content text-white">
             © 2024,{" "}
-            <a href="/" class="text-white">
+            <a href="/" className="text-white">
               Surfaces Nouvelle Ère
             </a>
           </div>
