@@ -1,9 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import "../app/globals.scss";
-import ImageSlider from "@/components/ImageSlider";
-import Header from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import Timeline from "@/components/Timeline";
 
 const Portfolio = () => {
@@ -88,14 +85,12 @@ const Portfolio = () => {
 
   return (
     <>
-      <Header />
       <div className="max-w-screen-lg mx-auto mt-8">
         <h2 className="text-3xl text-white text-center font-semibold mb-6">
           Nos Réalisations
         </h2>
         <Timeline projectsData={projectsData} />
       </div>
-      <Footer />
     </>
   );
 };

@@ -40,7 +40,7 @@ const Header = () => {
           />
         </Link>{" "}
         <div
-          className={`flex justify-center p-2 lg:hidden ${
+          className={`flex justify-center p-2 max-h-min lg:hidden ${
             showMobileMenu
               ? "header-icon header-icon-open transition-all duration-300 ease-in-out"
               : "header-icon header-icon-closed transition-all duration-300 ease-in-out"

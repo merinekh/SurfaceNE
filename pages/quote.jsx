@@ -4,9 +4,6 @@ import "../app/globals.scss";
 import { Container, Card, Form, Button, FormGroup } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Header from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
 const Quote = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [material, setMaterial] = useState("");
@@ -26,8 +23,6 @@ const Quote = () => {
 
   return (
     <>
-      {" "}
-      <Header />
       <div className="flex items-center justify-center py-4 bg-black">
         <Container className="flex justify-center xl:w-screen">
           <Card className="p-8 rounded-lg shadow-lg bg-white">
@@ -79,7 +74,7 @@ const Quote = () => {
                   selected={selectedDate}
                   onChange={handleDateChange}
                   placeholderText="Sélectionner une date"
-                  className="form-control mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
+                  className="form-control mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
                 />
               </Form.Group>
 
@@ -206,8 +201,7 @@ const Quote = () => {
             </Form>
           </Card>
         </Container>
-      </div>{" "}
-      <Footer />
+      </div>
     </>
   );
 };
