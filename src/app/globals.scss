@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles/variables.scss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+body {
+  background-color: $black-color;
+  margin: 0;
+}
+
+header {
+  color: white;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .header-logo {
+    width: 30vh;
+    max-width: 100%;
+    height: 20vh;
+
+    @screen sm {
+      max-width: 80%;
+    }
+
+    @screen md {
+      max-width: 50%;
+    }
+
+    @screen lg {
+      max-width: 60%;
+    }
+
+    @screen xl {
+      max-width: 70%;
+    }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    z-index: 1;
+    padding: 1.5rem;
+    background-color: $black-color;
+    border: gray solid 1px;
+
+    a {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .slides {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-height: 75vh;
+
+    @media (min-width: 768px) {
+      max-height: calc(100vw * 0.75); /* Adjust the aspect ratio as needed */
+    }
+
+    .slide {
+      display: none;
+      overflow: hidden;
+      max-height: 75vh;
+      position: absolute;
+      // opacity: 0; /* Initially set opacity to 0 */
+      transition: opacity 0.8s linear; /* Add opacity transition */
+
+      img {
+        max-height: 65vh;
+      }
+      &.active {
+        display: contents;
+        &.reverse {
+          img {
+            animation: slideInReverse 1s linear forwards;
+          }
+        }
+
+        &:not(.reverse) {
+          img {
+            animation: slideIn 1s linear forwards;
+          }
+        }
+      }
+      &.prev {
+        display: block;
+        &.reverse {
+          min-height: 100%;
+          animation: slideOutReverse 1s linear forwards;
+        }
+
+        &:not(.reverse) {
+          min-height: 100%;
+          animation: slideOut 1s linear forwards;
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      color: white;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+
+  .dots {
+    display: flex;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: gray;
+      margin: 0 5px;
+      cursor: pointer;
+
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    // opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    // opacity: 0;
+  }
+}
+
+@keyframes slideOutReverse {
+  0% {
+    transform: translateX(0%);
+    // opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    // opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    // opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    // opacity: 1;
+  }
+}
+
+@keyframes slideInReverse {
+  0% {
+    transform: translateX(-100%);
+    // opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    // opacity: 1;
+  }
+}
+// Added styles for smooth transition
+.header-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-icon-closed {
+  opacity: 1;
+}
+
+.header-icon-open {
+  opacity: 1;
+}
