@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ path }) => {
   const navLinks = [
     { label: "Accueil", href: "/" },
     { label: "Soumission", href: "/quote" },
@@ -78,7 +78,17 @@ const Header = () => {
                 </ul>
               </div>
             ) : (
-              <Link href={item.href}>{item.label}</Link>
+              <Link
+                href={item.href}
+                abc={console.log(path, item.ref)}
+                className={`${
+                  path === item.href
+                    ? "text-white underline underline-offset-4"
+                    : "text-gray-300"
+                } hover:text-white hover:underline hover:underline-offset-4`}
+              >
+                {item.label}
+              </Link>
             )}
           </div>
         ))}
