@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 const faqData = [
@@ -18,7 +19,7 @@ const faqData = [
     question:
       "Quelle est la différence entre un comptoir en Quartz et en Granite?",
     answer:
-      "Le Quartz et le Granite sont deux matériaux populaires pour les comptoirs, chacun avec ses propres caractéristiques. Le Quartz est un matériau fabriqué principalement à partir de cristaux de Quartz, de résines polymères et de pigments. Il offre une variété de couleurs et de motifs, ainsi qu'une grande durabilité et une résistance aux taches et aux rayures. Le Granite, quant à lui, est une pierre naturelle extraite de carrières. Il est apprécié pour son aspect unique et sa durabilité exceptionnelle. Bien que tous deux soient d'excellents choix, le choix entre Quartz et Granite dépend souvent des préférences esthétiques et des besoins individuels.",
+      "Le Quartz et le Granite sont deux matériaux populaires pour les comptoirs, chacun avec ses propres caractéristiques. BREAK Le Quartz est un matériau fabriqué principalement à partir de cristaux de Quartz, de résines polymères et de pigments. Il offre une variété de couleurs et de motifs, ainsi qu'une grande durabilité et une résistance aux taches et aux rayures. BREAK Le Granite, quant à lui, est une pierre naturelle extraite de carrières. Il est apprécié pour son aspect unique et sa durabilité exceptionnelle. Bien que tous deux soient d'excellents choix, le choix entre Quartz et Granite dépend souvent des préférences esthétiques et des besoins individuels.",
   },
   {
     question: "Est-ce que la prise de mesure à domicile est gratuite?",
@@ -35,7 +36,7 @@ const faqData = [
     question:
       "Quelles sont les recommandations d'entretien pour les comptoirs en Quartz?",
     answer:
-      "L'entretien des comptoirs en Quartz est relativement simple. Pour le nettoyage quotidien, utilisez un chiffon doux et de l'eau savonneuse. Évitez les produits abrasifs ou les nettoyants à base d'acide, car ils pourraient endommager la surface du Quartz. De plus, évitez de placer des objets chauds directement sur le comptoir, car cela pourrait provoquer des dommages permanents. Pour une protection supplémentaire, envisagez d'appliquer un scellant tous les ans.",
+      "L'entretien des comptoirs en Quartz est relativement simple. BREAK Pour le nettoyage quotidien, utilisez un chiffon doux et de l'eau savonneuse. BREAK Évitez les produits abrasifs ou les nettoyants à base d'acide, car ils pourraient endommager la surface du Quartz. BREAK De plus, évitez de placer des objets chauds directement sur le comptoir, car cela pourrait provoquer des dommages permanents. BREAK Pour une protection supplémentaire, envisagez d'appliquer un scellant tous les ans.",
   },
   {
     question: "Quelle est la durée de vie d'un comptoir en Quartz?",
@@ -66,6 +67,17 @@ const FAQ = () => {
   const handleToggle = (index) => {
     setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  const renderAnswerWithParagraphs = (answer) => {
+    return answer.split("BREAK").map((paragraph, index) => (
+      <>
+        {" "}
+        <p key={index} className="text-md">
+          {paragraph}
+        </p>
+        <br />
+      </>
+    ));
+  };
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -89,17 +101,55 @@ const FAQ = () => {
               onClick={() => handleToggle(index)}
             >
               <div className="text-md font-semibold">{item.question}</div>
-              {expandedIndex === index ? (
-                <FontAwesomeIcon icon={faMinus} />
-              ) : (
-                <FontAwesomeIcon icon={faPlus} />
-              )}
+              <motion.div
+                key={expandedIndex === index ? "minus" : "plus"}
+                initial={{
+                  rotate: expandedIndex === index ? -90 : 90,
+                }}
+                animate={{
+                  zIndex: 1,
+                  rotate: 0,
+                  transition: {
+                    type: "tween",
+                    duration: 0.15,
+                    ease: "circOut",
+                  },
+                }}
+                exit={{
+                  zIndex: 0,
+                  rotate: expandedIndex === index ? -90 : 90,
+                  transition: {
+                    type: "tween",
+                    duration: 0.15,
+                    ease: "circIn",
+                  },
+                }}
+              >
+                {expandedIndex === index ? (
+                  <FontAwesomeIcon icon={faMinus} />
+                ) : (
+                  <FontAwesomeIcon icon={faPlus} />
+                )}
+              </motion.div>
             </div>
-            {expandedIndex === index && (
-              <div className="bg-gray-100 px-4 py-2">
-                <p className="text-md">{item.answer}</p>
-              </div>
-            )}
+            <AnimatePresence>
+              {expandedIndex === index && (
+                <motion.div
+                  className="bg-gray-100 px-4 py-2"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{
+                    height: 0,
+                    opacity: 0,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <div className="text-md">
+                    {renderAnswerWithParagraphs(item.answer)}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
