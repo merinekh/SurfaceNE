@@ -164,10 +164,12 @@ header {
 
 @keyframes slideOut {
   0% {
+    width: 100%;
     transform: translateX(0);
     opacity: 1;
   }
   100% {
+    width: 100%;
     transform: translateX(-100%);
     opacity: 0;
   }
@@ -175,34 +177,32 @@ header {
 
 @keyframes slideOutReverse {
   0% {
+    width: 100%;
     transform: translateX(0%);
     opacity: 1;
   }
   100% {
     transform: translateX(100%);
     opacity: 0;
+    width: 100%;
   }
 }
 
 @keyframes slideIn {
   0% {
     transform: translateX(100%);
-    opacity: 0;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 
 @keyframes slideInReverse {
   0% {
     transform: translateX(-100%);
-    opacity: 0;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 // Added styles for smooth transition
