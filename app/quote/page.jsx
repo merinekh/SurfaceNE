@@ -25,7 +25,7 @@ const Quote = () => {
     <>
       <div className="flex items-center justify-center py-4 bg-black">
         <Container className="flex justify-center xl:w-screen">
-          <Card className="m-2 p-4 sm:p-8 rounded-lg shadow-lg bg-white">
+          <Card className="mx-2 p-4 sm:p-8  rounded-lg shadow-lg bg-white">
             <h1 className="text-3xl font-semibold text-center mb-4">
               Soumission Gratuite{" "}
             </h1>

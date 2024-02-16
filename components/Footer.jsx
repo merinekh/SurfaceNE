@@ -5,18 +5,20 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 export const Footer = () => {
   return (
     <div className="footer px-2">
-      <div className="footer__content-top mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
+      <div className="footer__content-top mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
         {/* <!-- Logo Column --> */}
         <div className="footer-block flex items-center justify-center col-span-1 md:col-span-1">
-          <img
-            src="/images/favicon_surfaces_nouvelle_ere.png"
-            alt="Surfaces Nouvelle Ère"
-            loading="lazy"
-            className="w-full max-w-xs"
-          />
+          <a href="/">
+            <img
+              src="/images/favicon_surfaces_nouvelle_ere.png"
+              alt="Surfaces Nouvelle Ère"
+              loading="lazy"
+              className="w-full max-w-xs"
+            />
+          </a>
         </div>
         {/* <!-- Mission Column --> */}
-        <div className="footer-block flex-col text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+        <div className="footer-block flex-col text-center  md:text-left lg:text-left col-span-1 md:col-span-1">
           <h2 className="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             NOTRE MISSION
           </h2>
@@ -35,7 +37,7 @@ export const Footer = () => {
           </p>
         </div>
         {/* <!-- Navigation Links Column --> */}
-        <div className="footer-block text-center sm:text-left md:text-left lg:text-left col-span-1 md:col-span-1">
+        <div className="footer-block text-center md:text-left lg:text-left col-span-1 md:col-span-1">
           <h2 className="footer-block__heading text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl mb-4">
             Passez à l'action
           </h2>
@@ -66,7 +68,7 @@ export const Footer = () => {
             </li>
           </ul>
           {/* <!-- Social Links --> */}
-          <div className="footer__list-social py-4">
+          <div className="flex justify-center md:justify-start py-4">
             <ul className="list-unstyled flex justify-center sm:justify-start">
               <li className="list-social__item px-4">
                 <a
