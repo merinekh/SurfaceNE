@@ -4,7 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 export const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer px-2">
       <div className="footer__content-top mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
         {/* <!-- Logo Column --> */}
         <div className="footer-block flex items-center justify-center col-span-1 md:col-span-1">
