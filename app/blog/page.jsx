@@ -8,7 +8,7 @@ const blogs = [
     date: "10 mars 2023",
     imageSrc:
       "//surfacesnouvelleere.ca/cdn/shop/articles/kitchen-5075245_1920.jpg?v=1666558804&amp;width=533",
-    link: "/blogs/quartz-vs-granite",
+    link: "/blog/quartz-vs-granite",
     excerpt:
       "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils partagent certaines...",
   },
@@ -17,7 +17,7 @@ const blogs = [
     date: "23 octobre 2022",
     imageSrc:
       "//surfacesnouvelleere.ca/cdn/shop/articles/Sans_titre_12.png?v=1666558843&amp;width=533",
-    link: "/blogs/blogues-et-actualites/quartz",
+    link: "/blog/quartz",
     excerpt:
       "Un comptoir de quartz est un choix populaire pour les cuisines et les salles de bains. Les avantages d'un comptoir en quartz sont nombreux, notamment sa durabilité, sa résistance aux...",
   },
@@ -26,7 +26,7 @@ const blogs = [
     date: "23 octobre 2022",
     imageSrc:
       "//surfacesnouvelleere.ca/cdn/shop/articles/home-5835289_1920.jpg?v=1666558753&amp;width=533",
-    link: "/blogs/granite",
+    link: "/blog/granite",
     excerpt:
       "Un comptoir de granit est un choix populaire pour les cuisines et les salles de bains. Il est apprécié pour sa beauté naturelle, sa durabilité et sa facilité d'entretien. Voici...",
   },

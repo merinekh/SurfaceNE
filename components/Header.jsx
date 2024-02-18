@@ -15,7 +15,7 @@ const Header = ({ path }) => {
       // ],
     },
     { label: "Nos réalisations", href: "/portfolio" },
-    { label: "Nos fournisseurs", href: "/provider" },
+    // { label: "Nos fournisseurs", href: "/provider" },
     { label: "Blogue", href: "/blog" },
     { label: "FAQ", href: "/faq" },
     { label: "Nous joindre", href: "/contact" },
@@ -80,7 +80,6 @@ const Header = ({ path }) => {
             ) : (
               <Link
                 href={item.href}
-                abc={console.log(path, item.ref)}
                 className={`${
                   path === item.href
                     ? "text-white underline underline-offset-4"

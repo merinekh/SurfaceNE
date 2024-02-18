@@ -7,7 +7,7 @@ const ProductsMainSections = () => {
         {renderSection(
           "QUARTZ",
           "Le quartz est une matière qui se démarque autant par son esthétique que sa résistance. Cette surface est facile à entretenir et durable. Le Quartz conserve une très longue durée de vie tout en conférant à votre espace un look contemporain et moderne. Consultez notre blogue sur le Quartz pour en savoir plus.",
-          "/blogs/blogues-et-actualites/quartz",
+          "/blog/quartz",
           "/images/benefits-of-quartz.png"
         )}
       </section>
@@ -16,7 +16,7 @@ const ProductsMainSections = () => {
         {renderSection(
           "GRANITE",
           "Le granite est une matière première encore plus robuste que le quartz. Il est réputé pour donner un look industriel ou moderne. Cependant, il est essentiel d'entretenir régulièrement votre surface en granite en utilisant des produits d'entretien appropriés pour maintenir votre comptoir comme neuf. Consultez notre blogue sur le Granite pour en savoir plus.",
-          "/blogs/blogues-et-actualites/granite",
+          "/blog/granite",
           "/images/benefits-of-granite.png"
         )}
       </section>
