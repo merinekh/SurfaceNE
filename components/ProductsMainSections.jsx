@@ -32,7 +32,7 @@ const renderSection = (title, content, link, imgsrc) => {
         alt=""
         className="w-full lg:w-1/3 lg:order-1 mb-2 lg:mb-0"
       />
-      <div className="max-w-3xl text-center lg:text-left lg:order-0">
+      <div className="max-w-3xl text-center px-2 sm:px-3 lg:text-left lg:order-0">
         <div className="text-white">
           <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-4">
             {title}
