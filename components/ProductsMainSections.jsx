@@ -26,11 +26,11 @@ const ProductsMainSections = () => {
 
 const renderSection = (title, content, link, imgsrc) => {
   return (
-    <div className="py-6 flex flex-col items-center lg:flex-row lg:justify-center">
+    <div className="py-6 sm:mx-2 flex flex-col items-center lg:flex-row lg:justify-center">
       <img
         src={imgsrc}
         alt=""
-        className="w-full lg:w-1/3 lg:order-1 mb-2 lg:mb-0"
+        className="w-full lg:w-1/3 lg:order-1 mb-2 lg:mb-0 sm:rounded-2xl	"
       />
       <div className="max-w-3xl text-center px-2 sm:px-3 lg:text-left lg:order-0">
         <div className="text-white">

@@ -7,13 +7,13 @@ const HomeMain = () => {
   return (
     <>
       <ProductsBanner />
-      <main className="flex flex-col items-center mx-4 sm:mx-8 lg:mx-24 px-4 sm:px-8">
+      <main className="flex flex-col items-center mx-2 sm:mx-8 lg:mx-24 px-2 lg:px-8">
         <div className="card bg-white flex flex-col lg:flex-row rounded-xl my-4 sm:my-8">
           <div className="image-content relative h-auto">
             <img
               src={`/images/project_images/ilot-14inch-2.jpg`}
               alt={`Image Home Card`}
-              className="w-full h-full object-cover rounded-t-sm lg:rounded-l-lg"
+              className="w-full h-full object-cover rounded-t-xl lg:rounded-l-lg"
             />
           </div>
           <div className="text-content p-4 sm:p-8 flex flex-col items-center">

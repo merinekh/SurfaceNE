@@ -70,7 +70,7 @@ export const Footer = () => {
           {/* <!-- Social Links --> */}
           <div className="flex justify-center md:justify-start py-4">
             <ul className="list-unstyled flex justify-center sm:justify-start">
-              <li className="list-social__item px-4">
+              <li className="list-social__item px-4 hover:scale-110">
                 <a
                   href="https://www.facebook.com/profile.php?id=100088187185568"
                   className="text-white"
@@ -78,7 +78,7 @@ export const Footer = () => {
                   <FacebookIcon />
                 </a>
               </li>
-              <li className="list-social__item">
+              <li className="list-social__item hover:scale-110">
                 <a
                   href="https://www.instagram.com/surfacesnouvelleere/?hl=fr"
                   className="text-white"

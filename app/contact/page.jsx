@@ -62,14 +62,6 @@ const Contact = () => {
         <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-4">
           Informations de contact
         </h2>{" "}
-        <iframe
-          className="h-80 w-full"
-          src="https://storage.googleapis.com/maps-solutions-li09ynpgkz/locator-plus/pamn/locator-plus.html"
-          width="100%"
-          height="100%"
-          //   style="border:0;"
-          loading="lazy"
-        />
         <div className="py-4 px-2">
           <p className="text-base md:text-lg text-gray-300">
             <FontAwesomeIcon
@@ -103,7 +95,15 @@ const Contact = () => {
             <span className="text-white font-semibold">Téléphone:</span> (514)
             424-3882
           </p>
-        </div>
+        </div>{" "}
+        <iframe
+          className="h-80 w-full"
+          src="https://storage.googleapis.com/maps-solutions-li09ynpgkz/locator-plus/pamn/locator-plus.html"
+          width="100%"
+          height="100%"
+          //   style="border:0;"
+          loading="lazy"
+        />
       </div>
     </>
   );
