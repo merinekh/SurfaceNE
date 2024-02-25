@@ -24,7 +24,7 @@ const Contact = () => {
           </h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group
-              controlId="formBasicNameEmail"
+              id="formBasicNameEmail"
               className="flex flex-col lg:flex-row"
             >
               <Form.Control
@@ -39,7 +39,7 @@ const Contact = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="formBasicMessage">
+            <Form.Group id="formBasicMessage">
               <Form.Control
                 as="textarea"
                 placeholder="Votre message"
@@ -89,7 +89,7 @@ const Contact = () => {
               className="mr-2 text-white mt-2"
             />
             <span className="text-white font-semibold">Courriel:</span>{" "}
-            info@surfacesnouvelleere.ca
+            <h4 className="">info@surfacesnouvelleere.ca</h4>
             <br />
             <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
             <span className="text-white font-semibold">Téléphone:</span> (514)

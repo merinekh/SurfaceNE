@@ -81,7 +81,8 @@ const Header = ({ path }) => {
               <Link
                 href={item.href}
                 className={`${
-                  path === item.href
+                  path === item.href ||
+                  path.split("/")[1] === item.href.split("/")[1]
                     ? "text-white underline underline-offset-4"
                     : "text-gray-300"
                 } hover:text-white hover:underline hover:underline-offset-4`}

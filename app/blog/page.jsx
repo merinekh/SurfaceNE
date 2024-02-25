@@ -46,11 +46,7 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
           className="w-full sm:h-72 object-cover object-bottom"
         />
         <Card.Body className="p-4">
-          <Card.Title className="text-lg font-semibold">
-            <a href={link} className="text-black hover:text-gray-700">
-              {title}
-            </a>
-          </Card.Title>
+          <Card.Title className="text-lg font-semibold">{title}</Card.Title>
           <Card.Text className="text-sm text-gray-600 mb-2">{date}</Card.Text>
           <Card.Text className="text-sm text-gray-700">{excerpt}</Card.Text>
         </Card.Body>
@@ -69,7 +65,8 @@ const BlogPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {blogs.map((blog, index) => (
           <div
-            key={blog.id}
+            key={index}
+            id={blog.id}
             className={`col-span-1  ${
               index === 0
                 ? "md:col-span-2 lg:col-span-1 flex justify-center"
