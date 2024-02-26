@@ -63,7 +63,7 @@ const Contact = () => {
           Informations de contact
         </h2>{" "}
         <div className="py-4 px-2">
-          <p className="text-base md:text-lg text-gray-300">
+          <div className="text-base md:text-lg text-gray-300">
             <FontAwesomeIcon
               icon={faMapMarkerAlt}
               className="mr-2 text-white"
@@ -89,12 +89,12 @@ const Contact = () => {
               className="mr-2 text-white mt-2"
             />
             <span className="text-white font-semibold">Courriel:</span>{" "}
-            <h4 className="">info@surfacesnouvelleere.ca</h4>
+            info@surfacesnouvelleere.ca
             <br />
             <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
             <span className="text-white font-semibold">Téléphone:</span> (514)
             424-3882
-          </p>
+          </div>
         </div>{" "}
         <iframe
           className="h-80 w-full"
