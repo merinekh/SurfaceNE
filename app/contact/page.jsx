@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Container, Card, Form, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,11 +8,43 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    details: "",
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const formRef = useRef();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Place your form submission logic here
+
+    emailjs.sendForm(serviceId, templateId, formRef.current, userId).then(
+      (result) => {
+        console.log(result.text);
+        setFormSubmitted(true); // Set formSubmitted to true after successful submission
+      },
+      (error) => {
+        console.log(error.text);
+        // You can add any error handling logic here
+      }
+    );
+
+    // Réinitialisation du formulaire après la soumission
+    setFormData({ name: "", email: "", details: "" });
   };
 
   return (
@@ -22,40 +54,61 @@ const Contact = () => {
           <h1 className="text-3xl font-semibold text-center mb-4">
             Contactez-nous
           </h1>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group
-              id="formBasicNameEmail"
-              className="flex flex-col lg:flex-row"
-            >
-              <Form.Control
-                type="text"
-                placeholder="Votre nom complet"
-                className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none lg:me-4"
-              />
-              <Form.Control
-                type="email"
-                placeholder="Votre courriel"
-                className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none"
-              />
-            </Form.Group>
+          {formSubmitted ? (
+            <div className="my-12">
+              <p className="text-center text-green-500">
+                Votre demande a été envoyée avec succès.
+              </p>{" "}
+              <p className="text-center text-black">
+                Un membre de notre équipe vous contactera dans les 24 prochaines
+                heures. Merci !
+              </p>
+            </div>
+          ) : (
+            <Form ref={formRef} onSubmit={handleSubmit}>
+              <Form.Group
+                id="formBasicNameEmail"
+                className="flex flex-col lg:flex-row"
+              >
+                <Form.Control
+                  type="text"
+                  placeholder="Votre nom complet"
+                  className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none lg:me-4"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <Form.Control
+                  type="email"
+                  placeholder="Votre courriel"
+                  className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-            <Form.Group id="formBasicMessage">
-              <Form.Control
-                as="textarea"
-                placeholder="Votre message"
-                rows={4}
-                className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none "
-              />
-            </Form.Group>
+              <Form.Group id="formBasicMessage">
+                <Form.Control
+                  as="textarea"
+                  placeholder="Votre message"
+                  rows={4}
+                  className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none "
+                  name="details"
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-            <Button
-              variant="primary"
-              type="submit"
-              className="w-full inline-block px-4 py-2 rounded-full bg-black text-white hover:bg-gray-300 transition duration-300 ease-in-out text-sm lg:text-base"
-            >
-              Envoyer
-            </Button>
-          </Form>
+              <Button
+                variant="primary"
+                type="submit"
+                className="w-full inline-block px-4 py-2 rounded-full bg-black text-white hover:bg-gray-300 transition duration-300 ease-in-out text-sm lg:text-base"
+              >
+                Envoyer
+              </Button>
+            </Form>
+          )}
         </Card>
       </Container>
       <div className="flex flex-col items-center text-white">
