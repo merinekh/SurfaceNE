@@ -5,35 +5,11 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Image from "next/image";
 
-const Slideshow = () => {
-  const slides = [
-    {
-      image: "/project_images/kitchen-countertop.jpg",
-      text: "Slide 2 Description",
-      buttonLink: "/link-to-slide2",
-    },
-    {
-      image: "/project_images/kitchen-1.jpg",
-      text: "Slide 3 Description",
-      buttonLink: "/link-to-slide3",
-    },
-    {
-      image: "/project_images/bathroom-1.jpg",
-      text: "Slide 2 Description",
-      buttonLink: "/link-to-slide2",
-    },
-    {
-      image: "home-caroussel-hero-1.jpg",
-      text: "Slide 1 Description",
-      buttonLink: "/link-to-slide1",
-    },
-    // Add more slides as needed
-  ];
-
+const Slideshow = ({ slides, isSmall = false }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(currentSlide - 1);
-  const [leftToR, setLeftToR] = useState(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
@@ -71,7 +47,13 @@ const Slideshow = () => {
 
   return (
     <div className="slideshow">
-      <div className="slides">
+      <div
+        className={`slides relative w-full ${
+          isSmall
+            ? "h-[20vh] sm:h-[30vh] rounded"
+            : "h-80 sm:h-[70vh] 2xl:h-auto"
+        } bg-cover `}
+      >
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -84,15 +66,14 @@ const Slideshow = () => {
                 : ""
             }`}
           >
-            <img
-              src={`/images/${slide.image}`}
+            <Image
+              src={slide.image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-80 bg-cover sm:h-[70vh] 2xl:h-auto"
+              objectFit="cover"
+              fill
+              sizes="100vw"
+              // quality={75}
             />
-            {/* <div className="slide-text">
-              <p>{slide.text}</p>
-              <a href={slide.buttonLink}>Link</a>
-            </div> */}
           </div>
         ))}
       </div>

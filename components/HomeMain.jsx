@@ -16,7 +16,10 @@ const HomeMain = () => {
               className="w-full h-full object-cover rounded-t-xl lg:rounded-l-lg"
             />
           </div>
-          <div className="text-content p-4 sm:p-8 flex flex-col items-center">
+          <div
+            id="steps"
+            className="text-content p-4 sm:p-8 flex flex-col items-center"
+          >
             <h2 className="h2 text-2xl font-bold mb-4 sm:mb-6">
               Votre comptoir en 5 étapes
             </h2>
