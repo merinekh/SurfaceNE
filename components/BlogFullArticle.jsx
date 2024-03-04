@@ -1,12 +1,21 @@
+"use client";
+import Image from "next/image";
+import React from "react";
+
 const BlogFullArticle = ({ blogs }) =>
   blogs.map((blog, index) => (
-    <>
+    <div>
       {" "}
-      <img
-        src={blog.imageSrc}
-        alt={blog.title}
-        className="w-full h-80 object-cover object-bottom"
-      />
+      <div className="relative h-[40vh] object-cover object-bottom">
+        <Image
+          src={blog.imageSrc}
+          alt={blog.title}
+          objectFit="cover"
+          objectPosition="top"
+          fill
+          className="w-full h-[45vh] object-cover object-bottom"
+        />
+      </div>
       <div className="py-6 px-4 flex flex-col items-center lg:justify-center">
         <article key={index} className="max-w-2xl mx-auto py-6">
           <div className="overflow-hidden rounded-lg shadow-lg text-white">
@@ -29,7 +38,7 @@ const BlogFullArticle = ({ blogs }) =>
           </div>
         </article>
       </div>
-    </>
+    </div>
   ));
 
 export default BlogFullArticle;

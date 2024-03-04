@@ -82,11 +82,11 @@ const FAQ = () => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="text-center text-white text-3xl font-semibold my-8">
+      <h1 className="text-center text-white text-2xl lg:text-3xl font-semibold my-8">
         Foire Aux Questions
       </h1>
       <div className="space-y-4">
-        <p className="text-gray-500 text-md font-semibold my-6">
+        <p className="text-gray-300 text-md font-semibold my-6">
           Consultez les questions les plus fréquemment posées.
         </p>
         {faqData.map((item, index) => (

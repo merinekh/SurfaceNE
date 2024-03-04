@@ -1,34 +1,34 @@
 "use client";
 import React from "react";
 import { Card } from "react-bootstrap";
+import image1 from "../../public/images/project_images/kitchenSinkGray&Black.png";
+import image2 from "../../public/images/project_images/kitchen-countertop-3.png";
+import image3 from "../../public/images/project_images/kitchenSurfaceGray&Black.png";
+import Image from "next/image";
 
 const blogs = [
   {
     title: "Comptoir quartz ou granit? Comment choisir?",
     date: "10 mars 2023",
-    imageSrc:
-      "//surfacesnouvelleere.ca/cdn/shop/articles/kitchen-5075245_1920.jpg?v=1666558804&amp;width=533",
+    imageSrc: image3,
     link: "/blog/quartz-vs-granite",
     excerpt:
-      "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils partagent certaines...",
+      "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils offrent des caractéristiques similaires...",
   },
   {
     title: "QUARTZ",
     date: "23 octobre 2022",
-    imageSrc:
-      "//surfacesnouvelleere.ca/cdn/shop/articles/Sans_titre_12.png?v=1666558843&amp;width=533",
+    imageSrc: image2,
     link: "/blog/quartz",
     excerpt:
-      "Un comptoir de quartz est un choix populaire pour les cuisines et les salles de bains. Les avantages d'un comptoir en quartz sont nombreux, notamment sa durabilité, sa résistance aux...",
+      "Un comptoir de quartz est un choix populaire pour les cuisines et les salles de bains. Les avantages d'un comptoir en quartz incluent sa durabilité, sa résistance aux taches...",
   },
   {
     title: "GRANIT",
     date: "23 octobre 2022",
-    imageSrc:
-      "//surfacesnouvelleere.ca/cdn/shop/articles/home-5835289_1920.jpg?v=1666558753&amp;width=533",
-    link: "/blog/granite",
+    imageSrc: image1,
     excerpt:
-      "Un comptoir de granit est un choix populaire pour les cuisines et les salles de bains. Il est apprécié pour sa beauté naturelle, sa durabilité et sa facilité d'entretien. Voici...",
+      "Un comptoir de granit est un choix populaire pour les cuisines et les salles de bains. Il est reconnu pour sa beauté naturelle, sa durabilité exceptionnelle et sa facilité d'entretien. Voici...",
   },
 ];
 
@@ -38,12 +38,13 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
       className="blog-article mb-6 lg:mb-0 hover:scale-105 hover:mx-2"
       href={link}
     >
-      <Card className="rounded-lg shadow-lg bg-white lg:h-42vh">
-        <Card.Img
+      <Card className="relative rounded-lg shadow-lg bg-white lg:h-[42vh] 2xl:h-[50vh]">
+        <Image
           variant="top"
           src={imageSrc}
           alt={title}
-          className="w-full sm:h-72 object-cover object-bottom"
+          objectFit="cover"
+          className="w-full sm:h-72 object-cover object-bottom rounded-t-lg 2xl:h-96"
         />
         <Card.Body className="p-4">
           <Card.Title className="text-lg font-semibold">{title}</Card.Title>
@@ -58,7 +59,7 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
 const BlogPage = () => {
   return (
     <div className="py-6 px-4 flex flex-col items-center lg:justify-center">
-      <h1 className="text-xl lg:text-2xl font-semibold mb-4 lg:mb-6 text-white">
+      <h1 className="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-6 text-white">
         Blogues et actualités
       </h1>
 

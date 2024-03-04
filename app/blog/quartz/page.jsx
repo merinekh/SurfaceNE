@@ -1,13 +1,31 @@
 "use client";
 import BlogFullArticle from "@/components/BlogFullArticle";
 import React from "react";
+import image1 from "../../../public/images/project_images/kitchenSurfaceGray&Black.png";
+// Get today's date
+const today = new Date();
+
+// Subtract 3 days
+const threeDaysAgo = new Date(today);
+threeDaysAgo.setDate(today.getDate() - 3);
+
+// Subtract 2 months
+const twoMonthsAgo = new Date(today);
+twoMonthsAgo.setMonth(today.getMonth() - 2);
+
+// Format the dates
+const formattedThreeDaysAgo = `${threeDaysAgo.getDate()} ${
+  months[threeDaysAgo.getMonth()]
+} ${threeDaysAgo.getFullYear()}`;
+const formattedTwoMonthsAgo = `${twoMonthsAgo.getDate()} ${
+  months[twoMonthsAgo.getMonth()]
+} ${twoMonthsAgo.getFullYear()}`;
 
 const blogs = [
   {
     title: "Quartz",
-    date: "23 octobre 2022",
-    imageSrc:
-      "//surfacesnouvelleere.ca/cdn/shop/articles/Sans_titre_12.png?v=1666558843",
+    date: formattedTwoMonthsAgo,
+    imageSrc: image1,
     content: [
       "Un comptoir de quartz est un choix populaire pour les cuisines et les salles de bains. Les avantages d'un comptoir en quartz sont nombreux, notamment sa durabilité, sa résistance aux taches et sa facilité d'entretien. Voici quelques-uns des principaux avantages d'un comptoir de quartz :",
       "Durabilité : Le quartz est un matériau très résistant. Il est composé à environ 93% de quartz naturel et 7% de résine synthétique. Cette combinaison crée un matériau solide et résistant qui est moins susceptible de se fissurer ou de se casser que d'autres matériaux de comptoir.",

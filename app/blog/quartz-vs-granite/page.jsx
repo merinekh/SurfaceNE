@@ -1,13 +1,13 @@
 "use client";
 import BlogFullArticle from "@/components/BlogFullArticle";
 import React from "react";
+import image1 from "../../../public/images/project_images/laundry-room-white-gray.png";
 
 const blogs = [
   {
     title: "Comptoir quartz ou granit? Comment choisir?",
     date: "10 mars 2023",
-    imageSrc:
-      "//surfacesnouvelleere.ca/cdn/shop/articles/kitchen-5075245_1920.jpg?v=1666558804&amp;width=350",
+    imageSrc: image1,
     content: [
       "Les comptoirs de quartz et de granit se distinguent comme deux des options les plus recherchées pour les surfaces de cuisine et de salle de bains. Bien qu'ils partagent certaines caractéristiques communes, ces matériaux présentent des différences significatives.",
       "Le granit, une pierre naturelle extraite de carrières du monde entier, offre une palette de couleurs, de motifs et de veines, rendant chaque dalle unique. Réputés pour leur résistance à la chaleur, aux rayures et aux taches, les comptoirs en granit ont généralement une durée de vie supérieure à leurs homologues en quartz. Cependant, un scellement régulier est essentiel pour atténuer les taches et les fissures.",

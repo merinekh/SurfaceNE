@@ -116,10 +116,14 @@ const Portfolio = () => {
 
   return (
     <div className="py-6 sm:mx-2 flex flex-col items-center 2xl:flex-row 2xl:justify-around">
+      <h1 className="text-2xl font-semibold mb-4 lg:mb-6 text-white">
+        Nos réalisations
+      </h1>
+
       {realisationsData.map((realisation, index) => (
         <div
           key={index}
-          className=" lg:order-1 mb-2 rounded-2xl border-yellow-500 border-2 shadow-lg"
+          className=" lg:order-1 m-2 sm:m-4 rounded-2xl border-yellow-500 border-2 shadow-lg"
         >
           <div className="max-w-3xl text-center sm:px-3 lg:order-0 px-6 py-4 rounded-xl shadow-lg">
             <div className="text-white">
