@@ -179,7 +179,7 @@ const Quote = () => {
                           onChange={handleMaterialChange}
                         />
                         <Form.Label htmlFor="granite-radio" className="ps-1">
-                          Granite
+                          Granit
                         </Form.Label>
                       </div>
                       <div className="flex pb-1">

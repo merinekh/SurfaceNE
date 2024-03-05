@@ -11,7 +11,7 @@ const blogs = [
     title: "Comptoir quartz ou granit? Comment choisir?",
     date: "10 janvier 2024",
     imageSrc: image3,
-    link: "/blog/quartz-vs-granite",
+    link: "/blog/quartz-vs-granit",
     excerpt:
       "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils offrent des caractéristiques similaires...",
   },
@@ -27,7 +27,7 @@ const blogs = [
     title: "GRANIT",
     date: "23 fevrier 2024",
     imageSrc: image1,
-    link: "/blog/granite",
+    link: "/blog/granit",
     excerpt:
       "Un comptoir de granit est un choix populaire pour les cuisines et les salles de bains. Il est reconnu pour sa beauté naturelle, sa durabilité exceptionnelle et sa facilité d'entretien. Voici...",
   },

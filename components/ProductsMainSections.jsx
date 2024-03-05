@@ -15,8 +15,8 @@ const ProductsMainSections = () => {
       <section className="section-container granite-section">
         {renderSection(
           "GRANITE",
-          "Le granite est une matière première encore plus robuste que le quartz. Il est réputé pour donner un look industriel ou moderne. Cependant, il est essentiel d'entretenir régulièrement votre surface en granite en utilisant des produits d'entretien appropriés pour maintenir votre comptoir comme neuf. Consultez notre blogue sur le Granite pour en savoir plus.",
-          "/blog/granite",
+          "Le granite est une matière première encore plus robuste que le quartz. Il est réputé pour donner un look industriel ou moderne. Cependant, il est essentiel d'entretenir régulièrement votre surface en granite en utilisant des produits d'entretien appropriés pour maintenir votre comptoir comme neuf. Consultez notre blogue sur le Granit pour en savoir plus.",
+          "/blog/granit",
           "/images/benefits-of-granite.png"
         )}
       </section>

@@ -18,9 +18,9 @@ const faqData = [
   },
   {
     question:
-      "Quelle est la différence entre un comptoir en Quartz et en Granite?",
+      "Quelle est la différence entre un comptoir en Quartz et en Granit?",
     answer:
-      "Le Quartz et le Granite sont deux matériaux populaires pour les comptoirs, chacun avec ses propres caractéristiques. BREAK Le Quartz est un matériau fabriqué principalement à partir de cristaux de Quartz, de résines polymères et de pigments. Il offre une variété de couleurs et de motifs, ainsi qu'une grande durabilité et une résistance aux taches et aux rayures. BREAK Le Granite, quant à lui, est une pierre naturelle extraite de carrières. Il est apprécié pour son aspect unique et sa durabilité exceptionnelle. Bien que tous deux soient d'excellents choix, le choix entre Quartz et Granite dépend souvent des préférences esthétiques et des besoins individuels.",
+      "Le Quartz et le Granit sont deux matériaux populaires pour les comptoirs, chacun avec ses propres caractéristiques. BREAK Le Quartz est un matériau fabriqué principalement à partir de cristaux de Quartz, de résines polymères et de pigments. Il offre une variété de couleurs et de motifs, ainsi qu'une grande durabilité et une résistance aux taches et aux rayures. BREAK Le Granite, quant à lui, est une pierre naturelle extraite de carrières. Il est apprécié pour son aspect unique et sa durabilité exceptionnelle. Bien que tous deux soient d'excellents choix, le choix entre Quartz et Granite dépend souvent des préférences esthétiques et des besoins individuels.",
   },
   {
     question: "Est-ce que la prise de mesure à domicile est gratuite?",
