@@ -9,7 +9,7 @@ import Image from "next/image";
 const blogs = [
   {
     title: "Comptoir quartz ou granit? Comment choisir?",
-    date: "10 mars 2023",
+    date: "10 janvier 2024",
     imageSrc: image3,
     link: "/blog/quartz-vs-granite",
     excerpt:
@@ -17,7 +17,7 @@ const blogs = [
   },
   {
     title: "QUARTZ",
-    date: "23 octobre 2022",
+    date: "22 janvier 2024",
     imageSrc: image2,
     link: "/blog/quartz",
     excerpt:
@@ -25,8 +25,9 @@ const blogs = [
   },
   {
     title: "GRANIT",
-    date: "23 octobre 2022",
+    date: "23 fevrier 2024",
     imageSrc: image1,
+    link: "/blog/granite",
     excerpt:
       "Un comptoir de granit est un choix populaire pour les cuisines et les salles de bains. Il est reconnu pour sa beauté naturelle, sa durabilité exceptionnelle et sa facilité d'entretien. Voici...",
   },

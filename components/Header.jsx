@@ -9,13 +9,8 @@ const Header = ({ path }) => {
     {
       label: "Nos produits",
       href: "/products",
-      // subLinks: [
-      //   { label: "Quartz", href: "/nos-produits/quartz" },
-      //   { label: "Granite", href: "/nos-produits/granite" },
-      // ],
     },
     { label: "Nos réalisations", href: "/portfolio" },
-    // { label: "Nos fournisseurs", href: "/provider" },
     { label: "Blogue", href: "/blog" },
     { label: "FAQ", href: "/faq" },
     { label: "Nous joindre", href: "/contact" },
@@ -31,12 +26,12 @@ const Header = ({ path }) => {
   return (
     <header className="header py-2">
       <div className="flex-col md-flex md-justify-between items-center">
-        <Link href="/" className="flex justify-center">
+        <Link href="/" className="flex justify-center relative">
           {/* Insert your company logo here */}
           <img
             className="header-logo md:max-w-lg xl:max-w-xl"
             src="/images/logo_surfaces_nouvelle_ere.png"
-            alt="Company Logo"
+            alt="Surface Nouvelle Ere Logo"
           />
         </Link>{" "}
         <div

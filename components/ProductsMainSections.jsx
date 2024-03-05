@@ -26,7 +26,7 @@ const ProductsMainSections = () => {
 
 const renderSection = (title, content, link, imgsrc) => {
   return (
-    <div className="py-6 sm:mx-2 flex flex-col items-center lg:flex-row lg:justify-center">
+    <div className="py-6 sm:mx-8 sm:px-2 flex flex-col items-center lg:flex-row lg:justify-center">
       <img
         src={imgsrc}
         alt=""
@@ -37,7 +37,7 @@ const renderSection = (title, content, link, imgsrc) => {
           <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-4">
             {title}
           </h2>
-          <p className="text-sm lg:text-base text-gray-300">{content}</p>
+          <p className=" text-gray-300">{content}</p>
         </div>
         <div className="mt-4 lg:mt-6">
           <a

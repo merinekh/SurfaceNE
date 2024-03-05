@@ -8,7 +8,10 @@ const HomeMain = () => {
     <>
       <ProductsBanner />
       <main className="flex flex-col items-center mx-2 sm:mx-8 lg:mx-24 px-2 lg:px-8">
-        <div className="card bg-white flex flex-col lg:flex-row rounded-xl my-4 sm:my-8">
+        <div
+          id="steps"
+          className="card bg-white flex flex-col lg:flex-row rounded-xl my-4 sm:my-8 "
+        >
           <div className="image-content relative h-auto">
             <img
               src={`/images/project_images/ilot-14inch-2.jpg`}
@@ -16,10 +19,7 @@ const HomeMain = () => {
               className="w-full h-full object-cover rounded-t-xl lg:rounded-l-lg"
             />
           </div>
-          <div
-            id="steps"
-            className="text-content p-4 sm:p-8 flex flex-col items-center"
-          >
+          <div className="text-content p-4 sm:p-8 flex flex-col items-center">
             <h2 className="h2 text-2xl font-bold mb-4 sm:mb-6">
               Votre comptoir en 5 étapes
             </h2>
