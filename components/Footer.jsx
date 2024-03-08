@@ -60,7 +60,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="/nous-joindre"
+                href="/contact"
                 className="text-white block mb-3 hover:underline"
               >
                 Contactez-nous
