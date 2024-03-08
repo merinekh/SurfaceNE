@@ -112,14 +112,14 @@ const Portfolio = () => {
 
   return (
     <>
-      <h1 className="text-2xl text-center font-semibold mb-4 lg:mb-6 text-white">
+      <h1 className="text-2xl text-center font-semibold my-4 text-white">
         Nos réalisations
       </h1>
-      <div className="py-6 sm:mx-2 flex flex-col items-center 2xl:flex-row 2xl:justify-around">
+      <div className="sm:mx-2 flex flex-col items-center 2xl:flex-row 2xl:justify-around">
         {realisationsData.map((realisation, index) => (
           <div
             key={index}
-            className=" lg:order-1 m-2 sm:m-4 rounded-2xl border-yellow-500 border-2 shadow-lg"
+            className=" lg:order-1 m-2 sm:mb-8 rounded-2xl border-yellow-500 border-2 shadow-lg"
           >
             <div className="max-w-3xl text-center sm:px-3 lg:order-0 px-6 py-4 rounded-xl shadow-lg">
               <div className="text-white">
@@ -131,7 +131,7 @@ const Portfolio = () => {
                   <>
                     <p
                       key={idx}
-                      className="text-sm lg:text-base text-white py-2"
+                      className="text-sm lg:text-lg font-light text-white py-2"
                     >
                       {paragraph}
                     </p>

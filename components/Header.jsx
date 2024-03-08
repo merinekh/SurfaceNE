@@ -75,6 +75,7 @@ const Header = ({ path }) => {
             ) : (
               <Link
                 href={item.href}
+                onClick={() => setShowMobileMenu(false)}
                 className={`${
                   path === item.href ||
                   path.split("/")[1] === item.href.split("/")[1]

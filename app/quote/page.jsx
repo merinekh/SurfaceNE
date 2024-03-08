@@ -36,6 +36,13 @@ const Quote = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Email validation check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      alert("Veuillez entrer une adresse email valide.");
+      return;
+    }
+
     emailjs.sendForm(serviceId, templateId, formRef.current, userId).then(
       (result) => {
         console.log(result.text);
@@ -118,6 +125,9 @@ const Quote = () => {
                         name="email"
                         onChange={handleChange}
                         className="w-full px-3 py-1 border border-gray-300 rounded bg-white mb-4 text-base focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" // Email validation pattern
+                        title="Veuillez entrer une adresse email valide."
+                        required
                       />
                     </Form.Group>
                   </div>

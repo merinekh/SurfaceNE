@@ -14,6 +14,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    city: "",
     details: "",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -32,6 +34,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Email validation check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      alert("Veuillez entrer une adresse email valide.");
+      return;
+    }
+
     emailjs.sendForm(serviceId, templateId, formRef.current, userId).then(
       (result) => {
         console.log(result.text);
@@ -44,7 +53,7 @@ const Contact = () => {
     );
 
     // Réinitialisation du formulaire après la soumission
-    setFormData({ name: "", email: "", details: "" });
+    setFormData({ name: "", email: "", phone: "", city: "", details: "" });
   };
 
   return (
@@ -85,9 +94,32 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" // Email validation pattern
+                  title="Veuillez entrer une adresse email valide."
+                  required
                 />
               </Form.Group>
-
+              <Form.Group
+                id="formBasicPhoneCity"
+                className="flex flex-col lg:flex-row"
+              >
+                <Form.Control
+                  type="text"
+                  placeholder="Votre numéro de téléphone"
+                  className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none lg:me-4"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <Form.Control
+                  type="text"
+                  placeholder="Votre ville"
+                  className="mb-4 w-full px-3 py-1 border border-gray-300 rounded bg-white text-base focus:outline-none"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                />
+              </Form.Group>
               <Form.Group id="formBasicMessage">
                 <Form.Control
                   as="textarea"
