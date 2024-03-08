@@ -44,7 +44,7 @@ export const Footer = () => {
           <ul className="list-unstyled">
             <li>
               <a
-                href="/nos-realisations"
+                href="/portfolio"
                 className="text-white block mb-3 hover:underline"
               >
                 Consultez nos réalisations

@@ -48,6 +48,14 @@ const BlogFullArticle = ({ blogs }) =>
                   )}
                 </p>
               ))}
+            </div>{" "}
+            <div className="my-4 lg:mt-6">
+              <a
+                href="/#steps"
+                className="text-center inline-block px-4 py-2 rounded-full bg-white text-black hover:bg-gray-300 transition duration-300 ease-in-out text-sm lg:text-base"
+              >
+                OBTENEZ VOTRE SOUMISSION GRATUITE
+              </a>
             </div>
             <div className="px-4 py-2">
               <a href="/blog" className="text-blue-500 hover:underline">
