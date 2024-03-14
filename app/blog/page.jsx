@@ -13,7 +13,7 @@ const blogs = [
     imageSrc: image3,
     link: "/blog/quartz-vs-granit",
     excerpt:
-      "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils offrent des caractéristiques similaires...",
+      "Les comptoirs de quartz et de granit sont deux des options les plus populaires pour les plans de travail de cuisine et de salle de bain. Bien qu'ils...",
   },
   {
     title: "QUARTZ",
@@ -39,7 +39,7 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
       className="blog-article mb-6 lg:mb-0 hover:scale-105 hover:mx-2"
       href={link}
     >
-      <Card className="relative rounded-lg shadow-lg bg-white lg:h-[42vh] 2xl:h-[50vh]">
+      <Card className="relative rounded-lg shadow-lg bg-white flex-grow 2xl:h-[50vh]">
         <Image
           variant="top"
           src={imageSrc}
