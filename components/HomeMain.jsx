@@ -16,7 +16,7 @@ const HomeMain = () => {
             <img
               src={`/images/project_images/ilot-14inch-2.jpg`}
               alt={`Image Home Card`}
-              className="w-full h-full object-cover rounded-t-xl lg:rounded-l-lg"
+              className="w-full h-full object-cover rounded-t-xl lg:rounded-none lg:rounded-l-lg"
             />
           </div>
           <div className="text-content p-4 sm:p-8 flex flex-col items-center">
