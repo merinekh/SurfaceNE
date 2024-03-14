@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 import "../globals.scss";
 import { Container, Card, Form, Button } from "react-bootstrap";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 const Quote = () => {
   const [formData, setFormData] = useState({

@@ -49,7 +49,7 @@ const Slideshow = ({ slides, isSmall = false }) => {
     <div className="slideshow">
       <div
         className={`slides relative w-full ${
-          isSmall ? "h-[20vh] sm:h-[30vh] rounded" : "h-80 sm:h-[70vh]"
+          isSmall ? "h-[25vh] sm:h-[30vh] rounded" : "h-80 sm:h-[70vh]"
         } bg-cover `}
       >
         {slides.map((slide, index) => (

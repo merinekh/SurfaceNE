@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const Header = ({ path }) => {
+const Header = () => {
+  const path = usePathname();
   const navLinks = [
     { label: "Accueil", href: "/" },
     { label: "Soumission", href: "/quote" },
