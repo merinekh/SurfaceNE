@@ -15,7 +15,7 @@ const HomeMain = () => {
           <div className="image-content relative h-auto">
             <img
               src={`/images/project_images/ilot-14inch-2.jpg`}
-              alt={`Image Home Card`}
+              alt={`Projet réalisé Ilot 14inch`}
               className="w-full h-full object-cover rounded-t-xl lg:rounded-none lg:rounded-l-lg"
             />
           </div>

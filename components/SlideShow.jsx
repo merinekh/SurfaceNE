@@ -66,7 +66,7 @@ const Slideshow = ({ slides, isSmall = false }) => {
           >
             <Image
               src={slide.image}
-              alt={`Slide ${index + 1}`}
+              alt={`Realisation/Projet ${index + 1}`}
               objectFit="cover"
               fill
               sizes="100vw"

@@ -11,7 +11,7 @@ export const Footer = () => {
           <a href="/">
             <img
               src="/images/favicon_surfaces_nouvelle_ere.png"
-              alt="Surfaces Nouvelle Ère"
+              alt="Surfaces Nouvelle Ère logo"
               loading="lazy"
               className="w-full max-w-xs"
             />
