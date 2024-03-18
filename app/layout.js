@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Header";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <Analytics />
         <CookieBanner />
       </body>
     </html>
