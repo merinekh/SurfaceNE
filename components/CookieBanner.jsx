@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const CookieBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const path = usePathname();
 
   useEffect(() => {
     const cookieAccepted = localStorage.getItem("cookieAccepted");
-    if (!cookieAccepted) {
+    if (!cookieAccepted && path === "/") {
       setShowBanner(true);
     }
   }, []);
