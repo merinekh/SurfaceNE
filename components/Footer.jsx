@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -9,12 +10,17 @@ export const Footer = () => {
         {/* <!-- Logo Column --> */}
         <div className="footer-block flex items-center justify-end col-span-1 md:col-span-1">
           <a href="/">
-            <img
-              src="/images/favicon_surfaces_nouvelle_ere.png"
-              alt="Surfaces Nouvelle Ère logo"
-              loading="lazy"
-              className="w-full max-w-xs"
-            />
+            <div className="w-full max-w-xs">
+              <Image
+                src="/images/favicon_surfaces_nouvelle_ere.png"
+                alt="Surfaces Nouvelle Ère logo"
+                width={200} // Adjust width and height according to your image dimensions
+                height={200}
+                loading="lazy"
+                className="w-full h-full"
+                layout="responsive" // Make the image responsive
+              />
+            </div>
           </a>
         </div>
         {/* <!-- Mission Column --> */}

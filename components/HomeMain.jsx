@@ -1,7 +1,9 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import StepComponent from "./StepsComponent";
 import ProductsBanner from "./ProductsHomeBanner";
+import image1 from "../public/images/project_images/ilot-14inch-2.jpg";
 
 const HomeMain = () => {
   return (
@@ -13,8 +15,8 @@ const HomeMain = () => {
           className="card bg-white flex flex-col lg:flex-row rounded-xl my-4 sm:my-8 "
         >
           <div className="image-content relative h-auto">
-            <img
-              src={`/images/project_images/ilot-14inch-2.jpg`}
+            <Image
+              src={image1}
               alt={`Projet réalisé Ilot 14inch`}
               className="w-full h-full object-cover rounded-t-xl lg:rounded-none lg:rounded-l-lg"
             />
