@@ -37,7 +37,7 @@ const renderSection = (title, content, link, imgsrc) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="max-w-3xl text-center px-2 sm:px-3 lg:text-left lg:order-0">
+      <div className="max-w-3xl text-center px-2 sm:px-3 lg:text-left lg:order-0 lg:w-2/3">
         <div className="text-white">
           <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-4">
             {title}
