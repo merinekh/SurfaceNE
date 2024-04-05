@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -30,11 +31,15 @@ const Header = () => {
       <div className="flex-col md-flex md-justify-between items-center">
         <Link href="/" className="flex justify-center relative">
           {/* Insert your company logo here */}
-          <img
-            className="header-logo md:max-w-lg xl:max-w-xl"
-            src="/images/logo_surfaces_nouvelle_ere.png"
-            alt="Surface Nouvelle Ere Logo"
-          />
+          <div className="header-logo md:max-w-lg xl:max-w-xl">
+            <Image
+              src="/images/logo_surfaces_nouvelle_ere.png"
+              alt="Surface Nouvelle Ere Logo"
+              width={200} // Adjust width and height according to your image dimensions
+              height={100}
+              layout="responsive" // Make the image responsive
+            />
+          </div>
         </Link>{" "}
         <div
           className={`flex justify-center p-2 max-h-min lg:hidden ${
