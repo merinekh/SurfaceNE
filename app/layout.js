@@ -14,17 +14,25 @@ export const metadata = {
     default:
       "Surfaces Nouvelle Ère - Spécialistes des Comptoirs en Quartz et Granit",
   },
-  description:
-    "Découvrez notre large sélection de comptoirs de cuisine en quartz et granit pour vos espaces de vie et vos salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+  description: {
+    template:
+      "%s | Découvrez notre large sélection de comptoirs en quartz et granit pour vos espaces de vie et salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+    default:
+      "Découvrez notre large sélection de comptoirs en quartz et granit pour vos espaces de vie et salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+  },
   openGraph: {
     title: {
       template:
         "%s | Surfaces Nouvelle Ère - Spécialistes des Comptoirs en Quartz et Granit",
       default:
-        "Spécialistes des Comptoirs en Quartz et Granit - Surfaces Nouvelle Ère",
+        "Surfaces Nouvelle Ère - Spécialistes des Comptoirs en Quartz et Granit",
     },
-    description:
-      "Découvrez notre large sélection de comptoirs de cuisine en quartz et granit pour vos espaces de vie et vos salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+    description: {
+      template:
+        "%s | Découvrez notre large sélection de comptoirs en quartz et granit pour vos espaces de vie et salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+      default:
+        "Découvrez notre large sélection de comptoirs en quartz et granit pour vos espaces de vie et salles de bains. Experts en installation de comptoirs sur mesure pour résidences et espaces commerciaux.",
+    },
     images: [
       "/opengraph-image.png", // L'URL de votre image ici
     ],
