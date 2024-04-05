@@ -8,7 +8,7 @@ export const Footer = () => {
     <div className="footer px-2">
       <div className="footer__content-top mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 py-8">
         {/* <!-- Logo Column --> */}
-        <div className="footer-block flex items-center justify-end col-span-1 md:col-span-1">
+        <div className="footer-block flex items-center justify-center md:justify-end col-span-1 md:col-span-1">
           <a href="/">
             <div className="w-full max-w-xs">
               <Image
