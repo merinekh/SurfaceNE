@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/Header";
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Analytics />
+        <SpeedInsights />
         <CookieBanner />
       </body>
     </html>
