@@ -1,7 +1,7 @@
 "use client";
 import BlogFullArticle from "@/components/BlogFullArticle";
 import React from "react";
-import image1 from "../../../public/images/project_images/kitchenSurfaceGray&Black.png";
+import image1 from "../../../public/images/project_images/blog2.jpg";
 
 const blogs = [
   {

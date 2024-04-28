@@ -1,12 +1,12 @@
 import SlideShow from "../components/SlideShow";
 import HomeMain from "../components/HomeMain";
 
-import image1 from "../public/images/project_images/kitchenGray&Black.png";
-import image2 from "../public/images/project_images/kitchen-countertop.jpg";
-import image3 from "../public/images/project_images/kitchen-1.jpg";
-import image4 from "../public/images/project_images/bathroom-1.jpg";
-import image5 from "../public/images/project_images/living-room-white.png";
-import image6 from "../public/images/project_images/kitchen-gray-2.png";
+import image1 from "../public/images/project_images/main_carroussel1.jpg";
+import image2 from "../public/images/project_images/main_carroussel2.jpg";
+import image3 from "../public/images/project_images/main_carroussel3.jpg";
+import image4 from "../public/images/project_images/main_carroussel4.jpg";
+import image5 from "../public/images/project_images/main_carroussel5.jpg";
+import image6 from "../public/images/project_images/main_carroussel6.jpg";
 
 const slides = [
   {

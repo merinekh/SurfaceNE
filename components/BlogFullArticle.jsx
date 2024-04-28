@@ -11,7 +11,7 @@ const BlogFullArticle = ({ blogs }) =>
           src={blog.imageSrc}
           alt={blog.title}
           objectFit="cover"
-          objectPosition="top"
+          objectPosition="bottom"
           fill
           // className="w-full h-[45vh] object-cover object-bottom"
         />

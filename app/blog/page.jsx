@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { Card } from "react-bootstrap";
-import image1 from "../../public/images/project_images/kitchenSinkGray&Black.png";
-import image2 from "../../public/images/project_images/kitchen-countertop-3.png";
-import image3 from "../../public/images/project_images/kitchenSurfaceGray&Black.png";
+import image1 from "../../public/images/project_images/blogs_general.jpg";
+import image2 from "../../public/images/project_images/blogs_general2.jpg";
+import image3 from "../../public/images/project_images/blogs_general3.jpg";
 import Image from "next/image";
 
 const blogs = [

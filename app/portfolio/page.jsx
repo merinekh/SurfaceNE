@@ -1,30 +1,31 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import "../globals.scss";
 import Slideshow from "@/components/SlideShow";
 
 // Kitchen
-import image1 from "../../public/images/project_images/kitchen-black-white.png";
-import image2 from "../../public/images/project_images/kitchen-white-wood-2.png";
-import image3 from "../../public/images/project_images/kitchen-gray-2.png";
-import image4 from "../../public/images/project_images/kitchenSurfaceGray&Black.png";
-import image5 from "../../public/images/project_images/kitchen-black-white-2.png";
-import image6 from "../../public/images/project_images/kitchen-gray-white.png";
+import image1 from "../../public/images/project_images/portfolio_kitchen_carroussel1.png";
+import image2 from "../../public/images/project_images/portfolio_kitchen_carroussel2.jpg";
+import image3 from "../../public/images/project_images/portfolio_kitchen_carroussel3.jpg";
+import image4 from "../../public/images/project_images/portfolio_kitchen_carroussel4.jpg";
+import image5 from "../../public/images/project_images/portfolio_kitchen_carroussel5.jpg";
+import image6 from "../../public/images/project_images/portfolio_kitchen_carroussel6.jpg";
 
 // Commun spaces
-import image7 from "../../public/images/project_images/counter-coffe.jpg";
-import image8 from "../../public/images/project_images/wine-countertop.jpg";
-import image9 from "../../public/images/project_images/ilot-14inch-1.jpg";
-import image10 from "../../public/images/project_images/kitchen-countertop-wine.jpg";
-import image11 from "../../public/images/project_images/living-room-white.png";
-import image12 from "../../public/images/project_images/space-white-wood.png";
+import image7 from "../../public/images/project_images/portfolio_communspace_carroussel1.jpg";
+import image8 from "../../public/images/project_images/portfolio_communspace_carroussel2.jpg";
+import image9 from "../../public/images/project_images/portfolio_communspace_carroussel3.jpg";
+import image10 from "../../public/images/project_images/portfolio_communspace_carroussel4.jpg";
+import image11 from "../../public/images/project_images/portfolio_communspace_carroussel5.jpg";
+import image12 from "../../public/images/project_images/portfolio_communspace_carroussel6.jpg";
 
 // Bathroom
-import image13 from "../../public/images/project_images/bathroom-1.jpg";
-import image14 from "../../public/images/project_images/bathroom-sink.jpg";
-import image15 from "../../public/images/project_images/bathroom-sink-bath.jpg";
-import image16 from "../../public/images/project_images/bathroom-1.jpg";
-import image17 from "../../public/images/project_images/laundry-room-white-gray.png";
+import image13 from "../../public/images/project_images/portfolio_bath_carroussel1.jpg";
+import image14 from "../../public/images/project_images/portfolio_bath_carroussel2.jpg";
+import image15 from "../../public/images/project_images/portfolio_bath_carroussel3.jpg";
+import image16 from "../../public/images/project_images/portfolio_bath_carroussel4.jpg";
+import image17 from "../../public/images/project_images/portfolio_bath_carroussel5.jpg";
+import image18 from "../../public/images/project_images/portfolio_bath_carroussel6.jpg";
 
 const Portfolio = () => {
   const realisationsData = [
@@ -104,6 +105,9 @@ const Portfolio = () => {
         },
         {
           image: image17,
+        },
+        {
+          image: image18,
         },
         // Add more slides as needed
       ],

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import image1 from "../public/images/benefits-of-quartz.png";
-import image2 from "../public/images/benefits-of-granite.png";
+import image2 from "../public/images/benefits-of-granite.jpg";
 
 const ProductsMainSections = () => {
   return (
