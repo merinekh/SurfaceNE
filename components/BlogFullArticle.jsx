@@ -6,7 +6,7 @@ const BlogFullArticle = ({ blogs }) =>
   blogs.map((blog, index) => (
     <div key={index}>
       {" "}
-      <div className="relative h-[15vh] sm:h-[35vh] 2xl:h-[45vh] object-cover object-bottom">
+      <div className="relative h-[15vh] sm:h-[35vh] 2xl:h-[40vh] object-cover object-bottom">
         <Image
           src={blog.imageSrc}
           alt={blog.title}

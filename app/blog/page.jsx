@@ -39,7 +39,7 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
       className="blog-article mb-6 lg:mb-0 hover:scale-105 hover:mx-2"
       href={link}
     >
-      <Card className="relative rounded-lg shadow-lg bg-white flex-grow 2xl:h-[50vh]">
+      <Card className="relative rounded-lg shadow-lg bg-white flex-grow 2xl:h-[45vh]">
         <Image
           variant="top"
           src={imageSrc}
@@ -48,9 +48,15 @@ const BlogCard = ({ title, date, imageSrc, link, excerpt }) => (
           className="w-full sm:h-72 object-cover object-bottom rounded-t-lg 2xl:h-96"
         />
         <Card.Body className="p-4">
-          <Card.Title className="text-lg font-semibold">{title}</Card.Title>
-          <Card.Text className="text-sm text-gray-600 mb-2">{date}</Card.Text>
-          <Card.Text className="text-sm text-gray-700">{excerpt}</Card.Text>
+          <Card.Title className="text-lg font-semibold 2xl:text-2xl">
+            {title}
+          </Card.Title>
+          <Card.Text className="text-sm text-gray-600 mb-2 2xl:text-xl">
+            {date}
+          </Card.Text>
+          <Card.Text className="text-sm text-gray-700 2xl:text-xl">
+            {excerpt}
+          </Card.Text>
         </Card.Body>
       </Card>
     </div>
